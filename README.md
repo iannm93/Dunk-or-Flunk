@@ -27,7 +27,7 @@ describe code block here
 
 
 ## Status
-Project is in progress. Feel free to email us with any suggestions or to report any bugs: kevinvunguyen95@gmail.com, kyleberner14@yahoo.com, inset Keaton's email, ianmharris93@gmail.com,
+Project is in progress. Feel free to email us with any suggestions or to report any bugs: kevinvunguyen95@gmail.com, kyleberner14@yahoo.com, keatonpsmith55@gmail.com, ianmharris93@gmail.com,
 
 
 ## Contact
