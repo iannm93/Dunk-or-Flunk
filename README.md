@@ -12,7 +12,7 @@
 ## General info
 This is a web application that allows a user to challenge themselves by taking a quiz testing their knowledge of NBA statistics and other NBA general information. The user has 10 seconds to answer each question, and each time they got a questio wrong, they receive a strike. When the user gets 3 strikes, the quiz ends. When a user finishes the quiz, they can share their score with their friends and save their high score to try to push their own limits if they choose to take the quiz again.
 ## Screenshots
-![program screenshot](wanderful.PNG)
+![program screenshot]()
 
 
 ## Setup
@@ -31,4 +31,4 @@ Project is in progress. Feel free to email us with any suggestions or to report 
 
 
 ## Contact
-Created by Kyle Berner, Kevin Nguyen, Keaton Smith, and Ian Harris (https://github.com/sylhuynh/wanderful)
+Created by Kyle Berner, Kevin Nguyen, Keaton Smith, and Ian Harris (https://github.com/iannm93/Dunk-or-Flunk)
