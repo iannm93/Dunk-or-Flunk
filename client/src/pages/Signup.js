@@ -40,6 +40,7 @@ function Signup() {
 
   return (
     <div className="container">
+      
       <h1>Signup</h1>
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
