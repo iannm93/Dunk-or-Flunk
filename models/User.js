@@ -8,16 +8,6 @@ const UserSchema = new Schema({
     required: true,
     trim: true,
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    lowercase: true,
-    index: {
-      unique: true,
-    },
-  },
   password: {
     type: String,
     required: true,
@@ -25,6 +15,10 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
+  },
+  highScore: {
+    type: Number,
+    default: 0,
   },
 });
 
