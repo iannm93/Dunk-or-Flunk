@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
-import API from "./../utils/API";
-import {useAuth} from "../utils/auth";
+import API from "../utils/API";
+import { useAuth } from "../utils/auth";
+import "../pages/signup.css";
 
 
 function Signup() {
@@ -39,47 +40,46 @@ function Signup() {
   };
 
   return (
-    <div className="container">
-      
+    <div class="uk-container uk-container-large">
       <h1>Signup</h1>
       <form onSubmit={handleFormSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            className="form-control"
-            placeholder="Username goes here..."
-            name="username"
-            type="text"
-            id="username"
-            onChange={handleChange}
-          />
+
+        <div className="uk-margin">
+          <div className="uk-inline">
+            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+            <input className="uk-input"
+              type="text"
+              placeholder="Username"
+              name="Username"
+              id="Username"
+              onChange={handleChange}></input>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email address:</label>
-          <input
-            className="form-control"
-            placeholder="Email goes here..."
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
+        <div className="uk-margin">
+          <div className="uk-inline">
+            <span className="uk-form-icon" uk-icon="icon: user"></span>
+            <input className="uk-input"
+              type="text"
+              placeholder="Email"
+              name="Email"
+              id="Email"
+              onChange={handleChange}></input>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            className="form-control"
-            placeholder="Password goes here..."
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
+
+        <div className="uk-margin">
+          <div className="uk-inline">
+            <span className="uk-form-icon" uk-icon="icon: lock"></span>
+            <input className="uk-input"
+              type="text"
+              placeholder="Password"
+              name="Password"
+              id="Password"
+              onChange={handleChange}></input>
+          </div>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
       </form>
+
       <p>
         <Link to="/login">Go to Login</Link>
       </p>
@@ -88,3 +88,48 @@ function Signup() {
 }
 
 export default Signup;
+
+/* <div className="container">
+<h1>Signup</h1>
+<form onSubmit={handleFormSubmit}>
+  <div className="form-group">
+    <label htmlFor="username">Username:</label>
+    <input
+      className="form-control"
+      placeholder="Username goes here..."
+      name="username"
+      type="text"
+      id="username"
+      onChange={handleChange}
+      />
+  </div>
+  <div className="form-group">
+    <label htmlFor="email">Email address:</label>
+    <input
+      className="form-control"
+      placeholder="Email goes here..."
+      name="email"
+      type="email"
+      id="email"
+      onChange={handleChange}
+      />
+  </div>
+  <div className="form-group">
+    <label htmlFor="pwd">Password:</label>
+    <input
+      className="form-control"
+      placeholder="Password goes here..."
+      name="password"
+      type="password"
+      id="pwd"
+      onChange={handleChange}
+      />
+  </div>
+  <button type="submit" className="btn btn-primary">
+    Submit
+  </button>
+</form>
+<p>
+  <Link to="/login">Go to Login</Link>
+</p>
+</div> */
