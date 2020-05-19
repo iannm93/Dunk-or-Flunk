@@ -40,13 +40,13 @@ function Signup() {
   };
 
   return (
-    <div class="uk-container uk-container-large">
+    <div className="uk-container uk-container-large Signup" id="signupContainer">
       <h1>Signup</h1>
       <form onSubmit={handleFormSubmit}>
 
         <div className="uk-margin">
           <div className="uk-inline">
-            {/* <span className="uk-form-icon" uk-icon="icon: pencil"></span> */}
+            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
             <input className="uk-input"
               type="text"
               placeholder="Username"
@@ -57,7 +57,7 @@ function Signup() {
         </div>
         <div className="uk-margin">
           <div className="uk-inline">
-            {/* <span className="uk-form-icon" uk-icon="icon: lock"></span> */}
+            <span className="uk-form-icon" uk-icon="icon: lock"></span>
             <input className="uk-input"
               type="text"
               placeholder="Password"

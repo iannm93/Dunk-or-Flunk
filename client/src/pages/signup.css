@@ -10,3 +10,10 @@ form{
 p{
     text-align: center;
 }
+#signupContainer{
+    color:black;
+    background-image: url("https://wallpaperbasketball.com/wp-content/uploads/2018/05/NBA-Wallpaper-For-Mac-Backgrounds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
