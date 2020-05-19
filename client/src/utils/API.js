@@ -5,7 +5,16 @@ export default {
     return axios.get(`/api/user/${id}`);
   },
   // sign up a user to our service
-  signUpUser: (username, email, password) => {
-    return axios.post("api/signup", {username: username, email: email, password: password});
-  }
+  signUpUser: (username, password) => {
+    return axios.post("api/signup", { username: username, password: password });
+  },
+  search: function () {
+    const BASEURL = "https://www.balldontlie.io/api/v1/season_averages?player_ids[]=6&player_ids[]=274";
+    const APIKEY = "&api_key=kvydgkf6qdjye5y3xrt464xp";
+    return axios.get(BASEURL + APIKEY);
+    
+  },
 };
+
+
+
