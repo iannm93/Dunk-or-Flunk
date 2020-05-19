@@ -14,6 +14,7 @@ import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Quiz from "./pages/Quiz"
+import EndQuiz from "./pages/EndQuiz";
 
 function ProtectedRoute({ children, ...rest }) {
   const { isLoggedIn } = useAuth();
@@ -44,6 +45,9 @@ function App() {
             </ProtectedRoute>
             <Route exact path="/quiz">
               <Quiz />
+            </Route>
+            <Route exact path="/end">
+              <EndQuiz />
             </Route>
           </Switch>
         </div>
