@@ -24,7 +24,7 @@ function Signup() {
     event.preventDefault();
     API.signUpUser(formState.username, formState.email, formState.password)
       .then(res => {
-       
+
         // send them to the login page
         history.replace("/login");
       })
@@ -55,18 +55,6 @@ function Signup() {
               onChange={handleChange}></input>
           </div>
         </div>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: user"></span>
-            <input className="uk-input"
-              type="text"
-              placeholder="Email"
-              name="Email"
-              id="Email"
-              onChange={handleChange}></input>
-          </div>
-        </div>
-
         <div className="uk-margin">
           <div className="uk-inline">
             <span className="uk-form-icon" uk-icon="icon: lock"></span>
