@@ -1,5 +1,7 @@
 import React from "react";
 import "../pages/Quiz.css";
+import Score from "../components/quizComponents/Score";
+import Timer from "../components/quizComponents/Timer";
 
 function Quiz() {
   return (
@@ -21,8 +23,8 @@ function Quiz() {
         </div>
         <div className="PvP">
 
-          <h1 className="white">Score: Your Score</h1>
-          <h2 className="white">Time: 0:20</h2>
+          <Score />
+          <Timer />
         </div>
         <div className="uk-card uk-card-hover uk-width-1-3@m">
           <div className="uk-card-header">
