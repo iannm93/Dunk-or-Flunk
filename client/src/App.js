@@ -28,7 +28,7 @@ function App() {
     <AuthProvider>
       <Router>
         <div>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
             <ProtectedRoute exact path="/">
               <Home />
