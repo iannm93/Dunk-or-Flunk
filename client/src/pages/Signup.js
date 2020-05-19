@@ -46,7 +46,7 @@ function Signup() {
 
         <div className="uk-margin">
           <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+            {/* <span className="uk-form-icon" uk-icon="icon: pencil"></span> */}
             <input className="uk-input"
               type="text"
               placeholder="Username"
@@ -57,7 +57,7 @@ function Signup() {
         </div>
         <div className="uk-margin">
           <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: lock"></span>
+            {/* <span className="uk-form-icon" uk-icon="icon: lock"></span> */}
             <input className="uk-input"
               type="text"
               placeholder="Password"
