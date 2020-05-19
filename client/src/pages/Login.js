@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import { useAuth } from "../utils/auth";
+import "../pages/login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -27,29 +28,33 @@ function Login() {
     <div className="container">
       <h1>Login</h1>
       <form onSubmit={handleFormSubmit}>
-        <div className="form-group">
-          <label htmlFor="email">Email address:</label>
-          <input
-            className="form-control"
-            placeholder="Email goes here..."
-            name="email"
-            type="email"
-            id="email"
-            value={email}
-            onChange={({ target }) => setEmail(target.value)}
-          />
+        <div className="uk-margin">
+          <div className="uk-inline">
+            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+            <input
+              className="uk-input"
+              type="text"
+              placeholder="Username"
+              name="Username"
+              id="Username"
+              value={email}
+              onChange={({ target }) => setEmail(target.value)}
+            />
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            className="form-control"
-            placeholder="Password goes here..."
-            name="password"
-            type="password"
-            id="pwd"
-            value={password}
-            onChange={({ target }) => setPassword(target.value)}
-          />
+        <div className="uk-margin">
+          <div className="uk-inline">
+          <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+            <input
+              className="uk-input"
+              type="Password"
+              placeholder="Password"
+              name="Password"
+              id="Password"
+              value={password}
+              onChange={({ target }) => setPassword(target.value)}
+            ></input>
+          </div>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
@@ -63,3 +68,48 @@ function Login() {
 }
 
 export default Login;
+
+// return (
+//   <div class="uk-container uk-container-large">
+//     <h1>Signup</h1>
+//     <form onSubmit={handleFormSubmit}>
+//       <div className="uk-margin">
+//         <div className="uk-inline">
+//           <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+//           <input className="uk-input"
+//             type="text"
+//             placeholder="Username"
+//             name="Username"
+//             id="Username"
+//             onChange={handleChange}></input>
+//         </div>
+//       </div>
+//       <div className="uk-margin">
+//         <div className="uk-inline">
+//           <span className="uk-form-icon" uk-icon="icon: user"></span>
+//           <input className="uk-input"
+//             type="Email"
+//             placeholder="Email"
+//             name="Email"
+//             id="Email"
+//             onChange={handleChange}></input>
+//         </div>
+//       </div>
+//       <div className="uk-margin">
+//         <div className="uk-inline">
+//           <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+//           <input className="uk-input"
+//             type="Password"
+//             placeholder="Password"
+//             name="Password"
+//             id="Password"
+//             onChange={handleChange}></input>
+//         </div>
+//       </div>
+//     </form>
+//     <p>
+//       <Link to="/login">Go to Login</Link>
+//     </p>
+//   </div>
+// );
+// }

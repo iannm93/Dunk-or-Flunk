@@ -12,8 +12,9 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Quiz from "./pages/Quiz"
+
 
 function ProtectedRoute({ children, ...rest }) {
   const { isLoggedIn } = useAuth();
@@ -28,7 +29,7 @@ function App() {
     <AuthProvider>
       <Router>
         <div>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
             <ProtectedRoute exact path="/">
               <Home />
