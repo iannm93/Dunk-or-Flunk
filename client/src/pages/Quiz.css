@@ -1,0 +1,48 @@
+.uk-card-footer {
+  text-align: center;
+}
+
+/* html { 
+  background: url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+
+h1, h2, h3, span {
+ color: white;
+}
+
+#header {
+  margin-top: 10px;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+
+#centerQuiz {
+  padding-top: 50px;
+}
+.PvP {
+  margin-top: 175px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+#quizContainer {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (max-width: 320px) {
+  style-element {
+    font-size: 10px;
+  }
+}
