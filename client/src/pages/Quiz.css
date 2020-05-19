@@ -11,7 +11,7 @@
 } */
 
 
-h1, h2, h3, span {
+.Quiz .white {
  color: white;
 }
 
@@ -42,6 +42,7 @@ a:hover {
 }
 
 #quizContainer {
+  color: white;
   background-image: url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
   background-size: cover;
   background-repeat: no-repeat;
