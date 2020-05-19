@@ -12,9 +12,9 @@ export const AuthProvider = ({ value, ...rest }) => {
     isLoggedIn ? authService.getProfile() : null
   );
 
-  const login = (email, password) => {
+  const login = (username, password) => {
     return authService
-      .login(email, password)
+      .login(username, password)
       .then(() => setUser(authService.getProfile()));
   };
 
