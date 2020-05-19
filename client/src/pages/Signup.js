@@ -24,7 +24,7 @@ function Signup() {
     event.preventDefault();
     API.signUpUser(formState.username, formState.email, formState.password)
       .then(res => {
-        // once the user has signed up
+       
         // send them to the login page
         history.replace("/login");
       })
