@@ -23,6 +23,13 @@ a:hover {
   background-color: transparent;
 }
 
+/* Using !important to override whatever uikit had as priority for cards */
+.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+  background: transparent !important;
+  cursor: pointer;
+}
+
+
 
 #centerQuiz {
   padding-top: 50px;
