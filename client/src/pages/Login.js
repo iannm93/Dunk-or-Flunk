@@ -26,23 +26,22 @@ function Login() {
 
   return (
     <div className="uk-cover-container uk-height-viewport" id="loginContainer">
-      <div className="uk-card uk-card-body">
+         <div className="uk-card uk-card-body">
         <h1>Dunk or Flunk</h1>
-        <h2>Login</h2>
-        <form onSubmit={handleFormSubmit}>
-          <div className="uk-margin">
-            <div className="uk-inline">
-              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-              <input
-                className="uk-input"
-                type="text"
-                placeholder="Username"
-                name="Username"
-                id="Username"
-                value={username}
-                onChange={({ target }) => setUsername(target.value)}
-              />
-            </div>
+      <h2>Login</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="uk-margin">
+          <div className="uk-inline">
+            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+            <input
+              className="uk-input"
+              type="text"
+              placeholder="Username"
+              name="Username"
+              id="Username"
+              value={username}
+              onChange={({ target }) => setUsername(target.value)}
+            />
           </div>
           <div className="uk-margin">
             <div className="uk-inline">
@@ -61,6 +60,7 @@ function Login() {
           <button type="submit" className="btn btn-primary">
             Submit
         </button>
+        </div>
         </form>
         <p>
           <Link to="/signup">Go to Signup</Link>
@@ -73,10 +73,10 @@ function Login() {
 export default Login;
 
 // return (
-  //   <div class="uk-container uk-container-large">
-  //     <h1>Signup</h1>
-  //     <form onSubmit={handleFormSubmit}>
-  //       <div className="uk-margin">
+//   <div class="uk-container uk-container-large">
+//     <h1>Signup</h1>
+//     <form onSubmit={handleFormSubmit}>
+//       <div className="uk-margin">
 //         <div className="uk-inline">
 //           <span className="uk-form-icon" uk-icon="icon: pencil"></span>
 //           <input className="uk-input"
