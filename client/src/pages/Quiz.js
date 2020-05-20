@@ -22,10 +22,12 @@ class Quiz extends React.Component {
       .then((res) =>
        // this.setState({ results: res.data.data } ))
         console.log("API response",res))
+        
       .then(() => console.log("state: ", this.state.results))
 
         .catch((err) => console.log(err));
-
+        
+    
 
   };
 
