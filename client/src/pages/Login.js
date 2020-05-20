@@ -3,6 +3,7 @@ import { Link, Redirect, useHistory } from "react-router-dom";
 import { useAuth } from "../utils/auth";
 import "../pages/login.css";
 
+//This logs us in
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -26,57 +27,58 @@ function Login() {
 
   return (
     <div className="uk-cover-container uk-height-viewport" id="loginContainer">
-         <div className="uk-card uk-card-body">
+      <div className="uk-card uk-card-body">
         <h1>Dunk or Flunk</h1>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="text"
-              placeholder="Username"
-              name="Username"
-              id="Username"
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
-            />
+        <h2>Login</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+              <input
+                className="uk-input"
+                type="text"
+                placeholder="Username"
+                name="Username"
+                id="Username"
+                value={username}
+                onChange={({ target }) => setUsername(target.value)}
+              />
+            </div>
           </div>
-        </div>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="Password"
-              placeholder="Password"
-              name="Password"
-              id="Password"
-              value={password}
-              onChange={({ target }) => setPassword(target.value)}
-            ></input>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+              <input
+                className="uk-input"
+                type="Password"
+                placeholder="Password"
+                name="Password"
+                id="Password"
+                value={password}
+                onChange={({ target }) => setPassword(target.value)}
+              ></input>
+            </div>
           </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
+          <button type="submit" className="btn btn-primary">
+            Submit
         </button>
-      </form>
-      <p>
-        <Link to="/signup">Go to Signup</Link>
-      </p>
+        </form>
+        <p>
+          <Link to="/signup">Go to Signup</Link>
+        </p>
       </div>
     </div>
   );
 }
+console.log(username);
 
 export default Login;
 
 // return (
-//   <div class="uk-container uk-container-large">
-//     <h1>Signup</h1>
-//     <form onSubmit={handleFormSubmit}>
-//       <div className="uk-margin">
+  //   <div class="uk-container uk-container-large">
+  //     <h1>Signup</h1>
+  //     <form onSubmit={handleFormSubmit}>
+  //       <div className="uk-margin">
 //         <div className="uk-inline">
 //           <span className="uk-form-icon" uk-icon="icon: pencil"></span>
 //           <input className="uk-input"
