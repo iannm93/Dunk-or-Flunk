@@ -59,7 +59,7 @@ function Signup() {
             <span className="uk-form-icon" uk-icon="icon: lock"></span>
             <input className="uk-input"
               type="password"
-              placeholder="password"
+              placeholder="Password goes here..."
               name="password"
               id="pwd"
               onChange={handleChange}></input>
@@ -67,7 +67,7 @@ function Signup() {
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
-  </button>
+        </button>
       </form>
 
       <p>
