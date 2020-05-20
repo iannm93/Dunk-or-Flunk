@@ -1,12 +1,51 @@
+/* Dunk or Flunk title  */
 h1{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    color: orange;
+    margin-top: 14rem;
+    margin-bottom: -1rem;
+    font-weight: bolder;
+    text-decoration: underline;
 }
-
-form{
+/* login title */
+h2{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-weight: bolder;
+    text-decoration: underline;
 }
+/* username/password */
+form{
+    text-align: center;
+    font-family: monospace;
+}
+/* p = link to login */
 p{
     text-align: center;
+    margin:2rem;
+    font-weight: 700;
+    margin-left: 3rem;
+    font-size: xx-large;
+    font-family: monospace;
+}
+/* image for background */
+#signupContainer{
+    color:black;
+    background-image: url("https://www.ecopetit.cat/wpic/mpic/165-1657200_baller-silhouette-photography-of-man-dunking-basketball-basketball.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+  }
+  /* submit button */
+.btn{
+color: red;
+font-size: large;
+font-weight: 800;
+border:dashed
+}
+.uk-card-body{
+    margin-top:-5rem;
 }

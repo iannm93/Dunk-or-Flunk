@@ -25,8 +25,10 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <h1>Login</h1>
+    <div className="uk-cover-container uk-height-viewport" id="loginContainer">
+         <div className="uk-card uk-card-body">
+        <h1>Dunk or Flunk</h1>
+      <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="uk-margin">
           <div className="uk-inline">
@@ -63,6 +65,7 @@ function Login() {
       <p>
         <Link to="/signup">Go to Signup</Link>
       </p>
+      </div>
     </div>
   );
 }
