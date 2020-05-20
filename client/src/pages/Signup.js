@@ -39,40 +39,41 @@ function Signup() {
   };
 
   return (
-    <div className="uk-container uk-container-large">
-      <h1>Signup</h1>
-      <form onSubmit={handleFormSubmit}>
-
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input className="uk-input"
-              type="text"
-              placeholder="username"
-              name="username"
-              id="username"
-              onChange={handleChange}></input>
+    <div className="uk-cover-container uk-height-viewport Signup" id="signupContainer">
+      <div className="uk-card uk-card-body">
+        <h1>Dunk or Flunk</h1>
+        <h2>Signup</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+              <input className="uk-input"
+                type="text"
+                placeholder="username"
+                name="username"
+                id="username"
+                onChange={handleChange}></input>
+            </div>
           </div>
-        </div>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: lock"></span>
-            <input className="uk-input"
-              type="password"
-              placeholder="password"
-              name="password"
-              id="pwd"
-              onChange={handleChange}></input>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: lock"></span>
+              <input className="uk-input"
+                type="password"
+                placeholder="password"
+                name="password"
+                id="pwd"
+                onChange={handleChange}></input>
+            </div>
           </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
+          <button type="submit" className="btn btn-primary">
+            Submit
   </button>
-      </form>
-
-      <p>
-        <Link to="/login">Go to Login</Link>
-      </p>
+        </form>
+        <p>
+          <Link to="/login">Go to Login</Link>
+        </p>
+      </div>
     </div>
   );
 }

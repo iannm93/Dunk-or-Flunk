@@ -4,7 +4,7 @@ import { useAuth } from "../utils/auth";
 import "../pages/login.css";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { isLoggedIn, login } = useAuth();
   const history = useHistory();
@@ -16,7 +16,7 @@ function Login() {
   const handleFormSubmit = event => {
     event.preventDefault();
 
-    login(email, password)
+    login(username, password)
       // navigate to the profile page
       .then(() => history.push("/profile"))
       .catch(err => {
@@ -25,8 +25,10 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <h1>Login</h1>
+    <div className="uk-cover-container uk-height-viewport" id="loginContainer">
+         <div className="uk-card uk-card-body">
+        <h1>Dunk or Flunk</h1>
+      <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="uk-margin">
           <div className="uk-inline">
@@ -37,14 +39,14 @@ function Login() {
               placeholder="Username"
               name="Username"
               id="Username"
-              value={email}
-              onChange={({ target }) => setEmail(target.value)}
+              value={username}
+              onChange={({ target }) => setUsername(target.value)}
             />
           </div>
         </div>
         <div className="uk-margin">
           <div className="uk-inline">
-          <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
             <input
               className="uk-input"
               type="Password"
@@ -63,6 +65,7 @@ function Login() {
       <p>
         <Link to="/signup">Go to Signup</Link>
       </p>
+      </div>
     </div>
   );
 }

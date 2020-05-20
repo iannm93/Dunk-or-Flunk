@@ -7,6 +7,9 @@ const UserSchema = new Schema({
     type: String,
     required: true,
     trim: true,
+    index: {
+      unique: true,
+    },
   },
   password: {
     type: String,
@@ -15,10 +18,6 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-  },
-  highScore: {
-    type: Number,
-    default: 0,
   },
 });
 
