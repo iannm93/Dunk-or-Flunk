@@ -32,7 +32,7 @@ class Quiz extends React.Component {
   };
 
   render() {
-  
+
     // Nikola Vucevic			id: 460
     // Mike Conley			id: 104
     // LaMarcus Aldridge		id: 6
