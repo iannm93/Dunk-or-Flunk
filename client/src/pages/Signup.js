@@ -70,9 +70,9 @@ function Signup() {
             Submit
   </button>
         </form>
-      <p>
-        <Link to="/login">Go to Login</Link>
-      </p>
+        <p>
+          <Link to="/login">Go to Login</Link>
+        </p>
       </div>
     </div>
   );
