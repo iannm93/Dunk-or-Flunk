@@ -1,11 +1,41 @@
+/* DUNK OR FLUNK TITLE */
 h1{
     text-align:center;
 }
-
-form{
-    text-align:center;
+/* LOGIN TITLE */
+h2{
+    text-align: center;
+    font-family: monospace;
+    color: red;
+    text-decoration: underline;
+    font-weight: bolder;
 }
-
+/* username/password */
+form{
+    text-align: center;
+    font-family: monospace;
+}
+/* go to signup page */
 p{
     text-align:center;
+    text-decoration: underline;
+    margin-left: 3rem;
+    font-family: monospace;
+    font-size: xx-large;
 }
+/* image for background */
+#loginContainer{
+    color:black;
+    background-image: url("https://www.ecopetit.cat/wpic/mpic/165-1657200_baller-silhouette-photography-of-man-dunking-basketball-basketball.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+  }
+  /* submit button */
+  .btn{
+      color: red;
+      font-size: large;
+      font-weight: 800;
+      border: dashed;
+  }
