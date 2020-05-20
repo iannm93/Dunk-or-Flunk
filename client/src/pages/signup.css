@@ -1,12 +1,45 @@
 h1{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    color: orange;
+    margin-top: 16rem;
+    margin-bottom: -2rem;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    
+    font-weight: bolder;
 }
 
 form{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+/* p = link to login */
 p{
     text-align: center;
+    margin:2rem;
+    font-weight: 700;
+}
+/* image for background */
+#signupContainer{
+    color:black;
+    background-image: url("https://www.ecopetit.cat/wpic/mpic/165-1657200_baller-silhouette-photography-of-man-dunking-basketball-basketball.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+  }
+  /* submit button */
+.btn{
+color: red;
+font-size: large;
+font-weight: 800;
+}
+.uk-card-body{
+    margin-top:-5rem;
 }

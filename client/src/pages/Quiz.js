@@ -2,7 +2,7 @@ import React from "react";
 import "../pages/Quiz.css";
 import Score from "../components/quizComponents/Score";
 import Timer from "../components/quizComponents/Timer";
-import PlayerCard from "../components/quizComponents/PlayerCard";
+import PlayerCard from "../components/quizComponents/playerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 
