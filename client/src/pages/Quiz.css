@@ -13,6 +13,8 @@
 
 .Quiz .white {
  color: white;
+ text-shadow: 2px 2px red;
+ text-decoration: none;
 }
 
 #header {
@@ -43,10 +45,12 @@ a:hover {
 
 #quizContainer {
   color: white;
-  background-image: url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
+  background: rgba(0,0,0,0.5) url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
+  background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
 }
 
 @media only screen and (max-width: 320px) {
