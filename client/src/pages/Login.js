@@ -18,51 +18,54 @@ function Login() {
 
     login(username, password)
       // navigate to the profile page
-      .then(() => history.push("/profile"))
+      .then(() => history.push("/quiz"))
       .catch(err => {
         alert(err.response.data.message);
       });
   };
 
   return (
-    <div className="container">
-      <h1>Login</h1>
-      <form onSubmit={handleFormSubmit}>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="text"
-              placeholder="Username"
-              name="Username"
-              id="Username"
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
-            />
+    <div className="uk-cover-container uk-height-viewport" id="loginContainer">
+      <div className="uk-card uk-card-body">
+        <h1>Dunk or Flunk</h1>
+        <h2>Login</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+              <input
+                className="uk-input"
+                type="text"
+                placeholder="Username"
+                name="Username"
+                id="Username"
+                value={username}
+                onChange={({ target }) => setUsername(target.value)}
+              />
+            </div>
           </div>
-        </div>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="Password"
-              placeholder="Password"
-              name="Password"
-              id="Password"
-              value={password}
-              onChange={({ target }) => setPassword(target.value)}
-            ></input>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+              <input
+                className="uk-input"
+                type="Password"
+                placeholder="Password"
+                name="Password"
+                id="Password"
+                value={password}
+                onChange={({ target }) => setPassword(target.value)}
+              ></input>
+            </div>
           </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
+          <button type="submit" className="btn btn-primary">
+            Submit
         </button>
-      </form>
-      <p>
-        <Link to="/signup">Go to Signup</Link>
-      </p>
+        </form>
+        <p>
+          <Link to="/signup">Go to Signup</Link>
+        </p>
+      </div>
     </div>
   );
 }
