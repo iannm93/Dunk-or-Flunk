@@ -10,7 +10,7 @@ function Login() {
   const history = useHistory();
 
   if (isLoggedIn) {
-    return <Redirect to="/quiz" />;
+    return <Redirect to="/" />;
   }
 
   const handleFormSubmit = event => {
