@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
+import API from "../utils/API";
 import { useAuth } from "../utils/auth";
+<<<<<<< HEAD
 import "../pages/login.css";
 
 //This logs us in
@@ -8,23 +10,35 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { isLoggedIn, login } = useAuth();
+=======
+import "../pages/signup.css";
+function Signup() {
+  const [formState, setFormState] = useState({
+    username: "",
+    password: ""
+  });
+  const { isLoggedIn } = useAuth();
+>>>>>>> 3a114933c8534c76cd3689f46028f30b2f2916eb
   const history = useHistory();
-
   if (isLoggedIn) {
     return <Redirect to="/" />;
   }
-
   const handleFormSubmit = event => {
     event.preventDefault();
-
-    login(username, password)
-      // navigate to the profile page
-      .then(() => history.push("/profile"))
-      .catch(err => {
-        alert(err.response.data.message);
-      });
+    API.signUpUser(formState.username, formState.password)
+      .then(res => {
+        // send them to the login page
+        history.replace("/login");
+      })
+      .catch(err => alert(err));
   };
-
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value
+    });
+  };
   return (
     <div className="uk-cover-container uk-height-viewport" id="loginContainer">
       <div className="uk-card uk-card-body">
