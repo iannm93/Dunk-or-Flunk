@@ -19,6 +19,10 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  highScore: {
+    type: Number,
+    default: 0,
+  },
 });
 
 // Execute before each user.save() call

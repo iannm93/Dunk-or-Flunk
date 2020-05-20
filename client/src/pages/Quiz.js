@@ -1,8 +1,9 @@
 import React from "react";
 import "../pages/Quiz.css";
 import Score from "../components/quizComponents/Score";
+import Brick from "../components/quizComponents/Brick";
 import Timer from "../components/quizComponents/Timer";
-import PlayerCard from "../components/quizComponents/playerCard";
+import PlayerCard from "../components/quizComponents/PlayerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 
@@ -31,7 +32,7 @@ class Quiz extends React.Component {
   };
 
   render() {
-  
+
     // Nikola Vucevic			id: 460
     // Mike Conley			id: 104
     // LaMarcus Aldridge		id: 6
@@ -66,8 +67,8 @@ class Quiz extends React.Component {
         <div className="uk-flex uk-flex-center" id="centerQuiz">
           <PlayerCard />
           <div className="PvP">
-
             <Score />
+            <Brick />
             <Timer />
           </div>
           <PlayerCard />
