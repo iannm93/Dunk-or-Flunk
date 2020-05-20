@@ -43,28 +43,28 @@ function Login() {
               onChange={({ target }) => setUsername(target.value)}
             />
           </div>
-        </div>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="Password"
-              placeholder="Password"
-              name="Password"
-              id="Password"
-              value={password}
-              onChange={({ target }) => setPassword(target.value)}
-            ></input>
+          <div className="uk-margin">
+            <div className="uk-inline">
+              <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+              <input
+                className="uk-input"
+                type="Password"
+                placeholder="Password"
+                name="Password"
+                id="Password"
+                value={password}
+                onChange={({ target }) => setPassword(target.value)}
+              ></input>
+            </div>
           </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
+          <button type="submit" className="btn btn-primary">
+            Submit
         </button>
-      </form>
-      <p>
-        <Link to="/signup">Go to Signup</Link>
-      </p>
+        </div>
+        </form>
+        <p>
+          <Link to="/signup">Go to Signup</Link>
+        </p>
       </div>
     </div>
   );
