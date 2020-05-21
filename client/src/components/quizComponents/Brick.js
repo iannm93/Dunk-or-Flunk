@@ -7,7 +7,7 @@ function Brick() {
 
   return (
     <div>
-      <h1 className="white">Bricks: 0</h1>
+      <h2 className="white">Bricks: 0</h2>
     </div>
   );
 }
