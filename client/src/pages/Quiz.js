@@ -1,8 +1,6 @@
 import React from "react";
 import "../pages/Quiz.css";
-import Score from "../components/quizComponents/Score";
-import Brick from "../components/quizComponents/Brick";
-import Timer from "../components/quizComponents/Timer";
+import ScoreCard from "../components/quizComponents/ScoreCard";
 import PlayerCard from "../components/quizComponents/PlayerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
@@ -61,16 +59,12 @@ class Quiz extends React.Component {
     // Bojan Bogdonovic		id: 54]
     //function pick random 2 from the state players
     return (
-      <div className="uk-cover-container uk-height-viewport Quiz" id="quizContainer">
+      <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport Quiz" id="quizContainer" uk-grid>
         <Questions />
         <hr className="uk-divider-icon"></hr>
         <div className="uk-flex uk-flex-center" id="centerQuiz">
           <PlayerCard />
-          <div className="PvP">
-            <Score />
-            <Brick />
-            <Timer />
-          </div>
+          <ScoreCard />
           <PlayerCard />
         </div>
       </div>
