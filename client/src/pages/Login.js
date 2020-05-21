@@ -25,41 +25,41 @@ function Login() {
 
   return (
     <div className="uk-cover-container uk-height-viewport" id="loginContainer">
-         <div className="uk-card uk-card-body">
+      <div className="uk-card uk-card-body">
         <h1>Dunk or Flunk</h1>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="text"
-              placeholder="Username"
-              name="Username"
-              id="Username"
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
-            />
-          </div>
+        <h2>Login</h2>
+        <form onSubmit={handleFormSubmit}>
           <div className="uk-margin">
             <div className="uk-inline">
               <span className="uk-form-icon" uk-icon="icon: pencil"></span>
               <input
                 className="uk-input"
-                type="Password"
-                placeholder="Password"
-                name="Password"
-                id="Password"
-                value={password}
-                onChange={({ target }) => setPassword(target.value)}
-              ></input>
+                type="text"
+                placeholder="Username"
+                name="Username"
+                id="Username"
+                value={username}
+                onChange={({ target }) => setUsername(target.value)}
+              />
             </div>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+            <div className="uk-margin">
+              <div className="uk-inline">
+                <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+                <input
+                  className="uk-input"
+                  type="Password"
+                  placeholder="Password"
+                  name="Password"
+                  id="Password"
+                  value={password}
+                  onChange={({ target }) => setPassword(target.value)}
+                ></input>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
         </button>
-        </div>
+          </div>
         </form>
         <p>
           <Link to="/signup">Go to Signup</Link>
