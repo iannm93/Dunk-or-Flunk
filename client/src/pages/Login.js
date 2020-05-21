@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import { useAuth } from "../utils/auth";
 import "../pages/login.css";
-<<<<<<< HEAD
-=======
-
->>>>>>> b5414e7b2363080adfd152be44289528b234c8eb
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -18,16 +14,10 @@ function Login() {
 
   const handleFormSubmit = event => {
     event.preventDefault();
-<<<<<<< HEAD
-    login(username, password)
-      // navigate to the profile page
-      .then(() => history.push("/profile"))
-=======
 
     login(username, password)
       // navigate to the profile page
       .then(() => history.push("/quiz"))
->>>>>>> b5414e7b2363080adfd152be44289528b234c8eb
       .catch(err => {
         alert(err.response.data.message);
       });
@@ -35,81 +25,52 @@ function Login() {
 
   return (
     <div className="uk-cover-container uk-height-viewport" id="loginContainer">
-         <div className="uk-card uk-card-body">
+      <div className="uk-card uk-card-body">
         <h1>Dunk or Flunk</h1>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="text"
-              placeholder="Username"
-              name="Username"
-              id="Username"
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
-            />
-          </div>
-<<<<<<< HEAD
-        </div>
-        <div className="uk-margin">
-          <div className="uk-inline">
-            <span className="uk-form-icon" uk-icon="icon: pencil"></span>
-            <input
-              className="uk-input"
-              type="Password"
-              placeholder="Password"
-              name="Password"
-              id="Password"
-              value={password}
-              onChange={({ target }) => setPassword(target.value)}
-            ></input>
-          </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-      <p>
-        <Link to="/signup">Go to Signup</Link>
-      </p>
-=======
+        <h2>Login</h2>
+        <form onSubmit={handleFormSubmit}>
           <div className="uk-margin">
             <div className="uk-inline">
               <span className="uk-form-icon" uk-icon="icon: pencil"></span>
               <input
                 className="uk-input"
-                type="Password"
-                placeholder="Password"
-                name="Password"
-                id="Password"
-                value={password}
-                onChange={({ target }) => setPassword(target.value)}
-              ></input>
+                type="text"
+                placeholder="Username"
+                name="Username"
+                id="Username"
+                value={username}
+                onChange={({ target }) => setUsername(target.value)}
+              />
             </div>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+            <div className="uk-margin">
+              <div className="uk-inline">
+                <span className="uk-form-icon" uk-icon="icon: pencil"></span>
+                <input
+                  className="uk-input"
+                  type="Password"
+                  placeholder="Password"
+                  name="Password"
+                  id="Password"
+                  value={password}
+                  onChange={({ target }) => setPassword(target.value)}
+                ></input>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
         </button>
-        </div>
+          </div>
         </form>
         <p>
           <Link to="/signup">Go to Signup</Link>
         </p>
->>>>>>> b5414e7b2363080adfd152be44289528b234c8eb
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-export default Login;
-=======
 
 export default Login;
 
->>>>>>> b5414e7b2363080adfd152be44289528b234c8eb
 // return (
 //   <div class="uk-container uk-container-large">
 //     <h1>Signup</h1>
@@ -153,8 +114,4 @@ export default Login;
 //     </p>
 //   </div>
 // );
-<<<<<<< HEAD
 // }
-=======
-// }
->>>>>>> b5414e7b2363080adfd152be44289528b234c8eb
