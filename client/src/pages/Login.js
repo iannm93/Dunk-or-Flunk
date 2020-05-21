@@ -25,10 +25,8 @@ function Login() {
   };
 
   return (
-    <div className="uk-cover-container uk-height-viewport" id="loginContainer">
-         <div className="uk-card uk-card-body">
-        <h1>Dunk or Flunk</h1>
-      <h2>Login</h2>
+    <div className="container">
+      <h1>Login</h1>
       <form onSubmit={handleFormSubmit}>
         <div className="uk-margin">
           <div className="uk-inline">
@@ -65,7 +63,6 @@ function Login() {
       <p>
         <Link to="/signup">Go to Signup</Link>
       </p>
-      </div>
     </div>
   );
 }
@@ -73,10 +70,10 @@ function Login() {
 export default Login;
 
 // return (
-//   <div class="uk-container uk-container-large">
-//     <h1>Signup</h1>
-//     <form onSubmit={handleFormSubmit}>
-//       <div className="uk-margin">
+  //   <div class="uk-container uk-container-large">
+  //     <h1>Signup</h1>
+  //     <form onSubmit={handleFormSubmit}>
+  //       <div className="uk-margin">
 //         <div className="uk-inline">
 //           <span className="uk-form-icon" uk-icon="icon: pencil"></span>
 //           <input className="uk-input"
