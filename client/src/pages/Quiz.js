@@ -12,9 +12,11 @@ class Quiz extends React.Component {
     player2: {},
     score: 0,
     brick: 0,
+    question: "",
   };
 
   componentDidMount() {
+    this.randomQuestion();
     this.searchPlayers();
   }
 
@@ -98,15 +100,35 @@ class Quiz extends React.Component {
       // this.setState({ player2: res.data.data[1]})
       .then(() => this.setState({ player1: player1 }))
       .then(() => this.setState({ player2: player2 }))
-      .then(() => console.log(this.state))
       .catch((err) => console.log(err));
+
   }
+  //mathrandom available stats from players1/2
+  //use chosen stat to form question
+  //if chosen stat === freethrow || field goal || three point then questions[0]
+  //else questions[1]
+  // make switch statement for which exact stat is chosen to choose percentage[i] or PerGame [i]
+  //compare chosen stat for answer to if statement
+  //increment score/brick based on answer
+  randomQuestion = () => {
+
+    const percentage = ["free throw", "field goal", "three point"]
+    const PerGame = ["blocks", "assists", "steals", "rebounds", "points", "minutes played"]
+    const questions = [
+      `Who has a better ${percentage[Math.floor((Math.random()) * percentage.length)]} percentage?`, `Who has more ${PerGame[Math.floor((Math.random()) * PerGame.length)]} per game?`
+    ]
+    const chosenQuestion = questions[Math.floor((Math.random()) * questions.length)]
+    this.setState({ question: chosenQuestion })
+  }
+
 
   HandleClick = (event) => {
     event.preventDefault()
     // Get the title of the clicked button
-    this.setState(({ brick }) => ({brick: brick +1 }))
-    this.setState(({ score }) => ({score: score +1}))
+    this.setState(({ brick }) => ({ brick: brick + 1 }))
+    this.setState(({ score }) => ({ score: score + 1 }))
+    const chosenName = event.target.dataset
+    console.log(chosenName)
   }
 
 
@@ -115,12 +137,12 @@ class Quiz extends React.Component {
   render() {
     return (
       <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport Quiz" id="quizContainer" uk-grid>
-        <Questions />
+        <Questions question={this.state.question} />
         <hr className="uk-divider-icon"></hr>
         <div className="uk-flex uk-flex-center" id="centerQuiz">
-          <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} HandleClick={this.HandleClick} />
+          <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} HandleClick={this.HandleClick} chosenQuestion={this.state.question} />
           <ScoreCard score={this.state.score} brick={this.state.brick} />
-          <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} HandleClick={this.HandleClick} />
+          <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} HandleClick={this.HandleClick} chosenQuestion={this.state.question} />
         </div>
       </div>
 
