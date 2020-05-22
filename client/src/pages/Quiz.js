@@ -20,18 +20,6 @@ class Quiz extends React.Component {
   }
 
   searchPlayers = () => {
-<<<<<<< HEAD
-    API.search()
-      .then((res) =>
-       // this.setState({ results: res.data.data } ))
-        console.log("API response",res))
-        
-      .then(() => console.log("state: ", this.state.results))
-
-        .catch((err) => console.log(err));
-        
-    
-=======
     const players = [{ name: "Kawhi Leonard", id: 274, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/c12fb587-fc86-471c-8a84-19caf31325ce/headshot_1570731868.jpg" },
     { name: "Giannis Antetokounmpo", id: 15, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/6c60282d-165a-4cba-8e5a-4f2d9d4c5905/headshot_1570735919.jpg" },
     { name: "Lebron James", id: 237, src: "https://www.google.com/search?q=Lebron+James+headshot&sxsrf=ALeKk02aBVKn4Vl_XjFx553jegcszEMSYA:1590008397899&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiJn_ztqsPpAhWNu54KHXFLC4kQ_AUoAXoECA8QAw&biw=1214&bih=626#imgrc=1mc10dvfkvirkM" },
@@ -109,7 +97,6 @@ class Quiz extends React.Component {
       .then(() => console.log(this.state))
       .catch((err) => console.log(err));
 
->>>>>>> 0851184e483629eccc13b8452c6e8599ae2e1f4a
 
 
   }
