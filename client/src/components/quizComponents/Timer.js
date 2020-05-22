@@ -27,7 +27,7 @@ export default class Timer extends Component {
   componentWillUnmount() {
     clearInterval(this.myInterval)
   }
-  render() {
+  render(props) {
     const { minutes, seconds } = this.state
     return (
       <div>

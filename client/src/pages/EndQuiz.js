@@ -2,8 +2,8 @@ import React from "react";
 import { SocialIcon } from 'react-social-icons';
 
 
-class EndQuiz extends React.Component {
-    render() {
+function EndQuiz(props){
+    
       return (
     <div>
         <div className='uk-heading-medium uk-text-center uk-margin-large-top'>
@@ -11,7 +11,7 @@ class EndQuiz extends React.Component {
         </div>
         <div className='uk-flex uk-flex-center'>
             <div className="uk-margin-top uk-card uk-card-primary uk-card-body uk-width-3-4">
-                <h1 className="uk-text-center">Score: 6</h1>
+                <h1 className="uk-text-center">Score: {props.score}</h1>
             </div>   
         </div>
         
@@ -28,6 +28,6 @@ class EndQuiz extends React.Component {
 
       );
     }
-  }
+  
 
   export default EndQuiz
