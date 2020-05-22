@@ -1,7 +1,7 @@
 import React from "react";
 import "../pages/Quiz.css";
 import ScoreCard from "../components/quizComponents/ScoreCard";
-import PlayerCard from "../components/quizComponents/playerCard";
+import PlayerCard from "../components/quizComponents/PlayerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 
@@ -10,8 +10,8 @@ class Quiz extends React.Component {
   state = {
     player1: {},
     player2: {},
-    score: 0,
-    brick: 0
+    score: "",
+    brick: "",
   };
 
   componentDidMount() {
@@ -88,11 +88,11 @@ class Quiz extends React.Component {
       .then((res) => {
         player1.stats = res.data.data[0];
       })
-      .then(()=> {
-      API.search2(player2.id)
-        .then((res) => {
-          player2.stats = res.data.data[0];
-      })
+      .then(() => {
+        API.search2(player2.id)
+          .then((res) => {
+            player2.stats = res.data.data[0];
+          })
       })
       // console.log("API response", res))
       // this.setState({ player2: res.data.data[1]})
@@ -102,14 +102,24 @@ class Quiz extends React.Component {
       .catch((err) => console.log(err));
   }
 
+  HandleClick = (event) => {
+    event.preventDefault()
+    // Get the title of the clicked button
+    this.setState({ brick: +1 })
+    this.setState({ score: +1 })
+  }
+
+
+
+
   render() {
     return (
       <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport Quiz" id="quizContainer" uk-grid>
         <Questions />
         <hr className="uk-divider-icon"></hr>
         <div className="uk-flex uk-flex-center" id="centerQuiz">
-          <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} />
-          <ScoreCard score={15} />
+          <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} HandleClick={this.HandleClick} />
+          <ScoreCard score={this.state.score} brick={this.state.brick} />
           <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} />
         </div>
       </div>
