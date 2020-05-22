@@ -11,7 +11,7 @@ class EndQuiz extends React.Component {
         </div>
         <div className='uk-flex uk-flex-center'>
             <div className="uk-margin-top uk-card uk-card-primary uk-card-body uk-width-3-4">
-                <h1 className="uk-text-center">Score: 5</h1>
+                <h1 className="uk-text-center">Score: 6</h1>
             </div>   
         </div>
         
