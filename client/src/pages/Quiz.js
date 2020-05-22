@@ -5,7 +5,7 @@ import PlayerCard from "../components/quizComponents/PlayerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 import EndQuiz from "./EndQuiz";
-import {Redirect} from "react-router-dom"
+import { Redirect } from "react-router-dom"
 
 class Quiz extends React.Component {
   //set your state of 50 players here
@@ -71,22 +71,22 @@ class Quiz extends React.Component {
     { name: "Zion Williamson", id: 666969, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/5cc51c05-06f5-4ae4-89a4-1d329fbbcdfb/headshot_1570659604.jpg" },
     { name: "Trae Young", id: 490, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/cf418e0c-de9d-438f-a1ac-3be539a56c42/headshot_1570728816.jpg" },
     { name: "Bojan Bogdonovic", id: 54, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/7ff02e19-e829-4e56-9a34-233a71fce76c/headshot_1570558387.jpg" },
-    ]
+    ];
 
 
-    let randomNum1 = Math.floor(Math.random() * players.length)
-    let randomNum2 = Math.floor(Math.random() * players.length)
+    const randomNum1 = Math.floor(Math.random() * players.length);
+    const randomNum2 = Math.floor(Math.random() * players.length);
 
     const player1 = {
       name: players[randomNum1].name,
       id: players[randomNum1].id,
       image: players[randomNum1].src
-    }
+    };
     const player2 = {
       name: players[randomNum2].name,
       id: players[randomNum2].id,
       image: players[randomNum2].src
-    }
+    };
 
     API.search1(player1.id)
       .then((res) => {
@@ -96,7 +96,7 @@ class Quiz extends React.Component {
         API.search2(player2.id)
           .then((res) => {
             player2.stats = res.data.data[0];
-          })
+          });
       })
       // console.log("API response", res))
       // this.setState({ player2: res.data.data[1]})
@@ -114,15 +114,15 @@ class Quiz extends React.Component {
   //increment score/brick based on answer
   randomQuestion = () => {
 
-    const percentage = [{ key: "free throw", name: "ft_pct" }, { key: "field goal", name: "fg_pct" }, { key: "three point", name: "fg3_pct" }]
-    const PerGame = [{ key: "blocks", name: "blk" }, { key: "assists", name: "ast" }, { key: "steals", name: "stl" }, { key: "rebounds", name: "reb" }, { key: "points", name: "pts" }, { key: "minutes played", name: "min" }]
-    const chosenPercentageStat = percentage[Math.floor((Math.random()) * percentage.length)]
-    const chosenPerGameStat = PerGame[Math.floor((Math.random()) * PerGame.length)]
+    const percentage = [{ key: "free throw", name: "ft_pct" }, { key: "field goal", name: "fg_pct" }, { key: "three point", name: "fg3_pct" }];
+    const PerGame = [{ key: "blocks", name: "blk" }, { key: "assists", name: "ast" }, { key: "steals", name: "stl" }, { key: "rebounds", name: "reb" }, { key: "points", name: "pts" }, { key: "minutes played", name: "min" }];
+    const chosenPercentageStat = percentage[Math.floor((Math.random()) * percentage.length)];
+    const chosenPerGameStat = PerGame[Math.floor((Math.random()) * PerGame.length)];
     const questions = [
       { questionDisplay: `Who has a better ${chosenPercentageStat.key} percentage?`, comparableStat: chosenPercentageStat }, { questionDisplay: `Who has more ${chosenPerGameStat.key} per game?`, comparableStat: chosenPerGameStat }
-    ]
-    const chosenQuestion = questions[Math.floor((Math.random()) * questions.length)]
-    this.setState({ question: chosenQuestion })
+    ];
+    const chosenQuestion = questions[Math.floor((Math.random()) * questions.length)];
+    this.setState({ question: chosenQuestion });
   }
 
   //Use id to get the person the player chose and store it in a new temp variable
@@ -144,8 +144,8 @@ class Quiz extends React.Component {
   }
 
   compareStat = (userGuess) => {
-    let usersChosenPlayer
-    let enemyPlayer
+    let usersChosenPlayer;
+    let enemyPlayer;
 
     // array = [a, b, c]
     // object = {
@@ -157,27 +157,26 @@ class Quiz extends React.Component {
     // var thing = c
     // object[thing] = 3
     if (this.state.player1.id === userGuess) {
-      usersChosenPlayer = this.state.player1
+      usersChosenPlayer = this.state.player1;
     } else {
-      enemyPlayer = this.state.player1
+      enemyPlayer = this.state.player1;
     }
     if (this.state.player2.id === userGuess) {
-      usersChosenPlayer = this.state.player2
+      usersChosenPlayer = this.state.player2;
     } else {
-      enemyPlayer = this.state.player2
+      enemyPlayer = this.state.player2;
     }
 
-    let chosenQuestionValue = this.state.question.comparableStat.name
-    console.log(chosenQuestionValue)
+    const chosenQuestionValue = this.state.question.comparableStat.name;
+    console.log(chosenQuestionValue);
 
-    console.log(this.state.player1.stats.min)
-    console.log(this.state.player1.stats[chosenQuestionValue])
+    console.log(this.state.player1.stats.min);
+    console.log(this.state.player1.stats[chosenQuestionValue]);
 
-    let userStatsToCompare = usersChosenPlayer.stats[chosenQuestionValue]
-    let enemyStatsToCompare = enemyPlayer.stats[chosenQuestionValue]
-    console.log(userStatsToCompare)
-    console.log(enemyStatsToCompare)
-
+    const userStatsToCompare = usersChosenPlayer.stats[chosenQuestionValue];
+    const enemyStatsToCompare = enemyPlayer.stats[chosenQuestionValue];
+    console.log(userStatsToCompare);
+    console.log(enemyStatsToCompare);
 
 
     if (userStatsToCompare > enemyStatsToCompare) {
@@ -185,16 +184,13 @@ class Quiz extends React.Component {
       this.randomQuestion();
       this.searchPlayers();
     } else {
-      this.setState(({ brick }) => ({ brick: brick + 1 }))
-      this.randomQuestion();
-      this.searchPlayers();
+      return this.setState(({ brick }) => ({ brick: brick + 1 }));
     }
 
     // console.log(userGuess)
     // console.log(brick)
-  
-  }
 
+  }
 
 
   render() {
@@ -214,7 +210,7 @@ class Quiz extends React.Component {
       </div>
 
 
-    )
+    );
   }
 }
 
