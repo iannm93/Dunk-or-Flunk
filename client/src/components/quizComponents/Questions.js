@@ -9,7 +9,7 @@ function Questions(props) {
     // ]
 
     return (
-        <h1 className="uk-heading-medium uk-text-center white" id="header"><span>{props.question}</span></h1>
+        <h1 className="uk-heading-medium uk-text-center white" id="header"><span>{props.question.questionDisplay}</span></h1>
     );
 }
 

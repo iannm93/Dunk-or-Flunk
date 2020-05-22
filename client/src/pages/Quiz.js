@@ -101,8 +101,8 @@ class Quiz extends React.Component {
       .then(() => this.setState({ player1: player1 }))
       .then(() => this.setState({ player2: player2 }))
       .catch((err) => console.log(err));
-
   }
+
   //mathrandom available stats from players1/2
   //use chosen stat to form question
   //if chosen stat === freethrow || field goal || three point then questions[0]
@@ -112,25 +112,76 @@ class Quiz extends React.Component {
   //increment score/brick based on answer
   randomQuestion = () => {
 
-    const percentage = ["free throw", "field goal", "three point"]
-    const PerGame = ["blocks", "assists", "steals", "rebounds", "points", "minutes played"]
+    const percentage = [{ key: "free throw", name: "ft_pct" }, { key: "field goal", name: "fg_pct" }, { key: "three point", name: "fg3_pct" }]
+    const PerGame = [{ key: "blocks", name: "blk" }, { key: "assists", name: "ast" }, { key: "steals", name: "stl" }, { key: "rebounds", name: "reb" }, { key: "points", name: "pts" }, { key: "minutes played", name: "min" }]
+    const chosenPercentageStat = percentage[Math.floor((Math.random()) * percentage.length)]
+    const chosenPerGameStat = PerGame[Math.floor((Math.random()) * PerGame.length)]
     const questions = [
-      `Who has a better ${percentage[Math.floor((Math.random()) * percentage.length)]} percentage?`, `Who has more ${PerGame[Math.floor((Math.random()) * PerGame.length)]} per game?`
+      { questionDisplay: `Who has a better ${chosenPercentageStat.key} percentage?`, comparableStat: chosenPercentageStat }, { questionDisplay: `Who has more ${chosenPerGameStat.key} per game?`, comparableStat: chosenPerGameStat }
     ]
     const chosenQuestion = questions[Math.floor((Math.random()) * questions.length)]
     this.setState({ question: chosenQuestion })
   }
 
+  //Use id to get the person the player chose and store it in a new temp variable
+  //Use this.state.question.comparableStat to get the relevant stat for that player
+  //Compare the chosen stat to the other player's stat
 
-  HandleClick = (event) => {
-    event.preventDefault()
+  HandleClick = (userGuess) => {
+    // event.preventDefault()
     // Get the title of the clicked button
-    this.setState(({ brick }) => ({ brick: brick + 1 }))
-    this.setState(({ score }) => ({ score: score + 1 }))
-    const chosenName = event.target.dataset
-    console.log(chosenName)
+    // this.setState(({ brick }) => ({ brick: brick + 1 }))
+    // this.setState(({ score }) => ({ score: score + 1 }))
+    // let userGuess = event.target.value
+
+    // console.log(userGuess)
+    this.compareStat(userGuess);
   }
 
+  compareStat = (userGuess) => {
+    let usersChosenPlayer
+    let enemyPlayer
+
+    // array = [a, b, c]
+    // object = {
+    //   a: 1,
+    //   b: 2,
+    //   c: 3
+    // }
+    // object.c = 3
+    // var thing = c
+    // object[thing] = 3
+    if (this.state.player1.id === userGuess) {
+      usersChosenPlayer = this.state.player1
+    } else {
+      enemyPlayer = this.state.player1
+    }
+    if (this.state.player2.id === userGuess) {
+      usersChosenPlayer = this.state.player2
+    } else {
+      enemyPlayer = this.state.player2
+    }
+
+    let chosenQuestionValue = this.state.question.comparableStat.name
+    console.log(chosenQuestionValue)
+
+    console.log(this.state.player1.stats.min)
+    console.log(this.state.player1.stats[chosenQuestionValue])
+
+    let userStatsToCompare = usersChosenPlayer.stats[chosenQuestionValue]
+    let enemyStatsToCompare = enemyPlayer.stats[chosenQuestionValue]
+    console.log(userStatsToCompare)
+    console.log(enemyStatsToCompare)
+
+
+
+    if (userStatsToCompare > enemyStatsToCompare) {
+      return this.setState(({ score }) => ({ score: score + 1 }))
+    } else {
+      return this.setState(({ brick }) => ({ brick: brick + 1 }))
+    }
+    // console.log(userGuess)
+  }
 
 
 
@@ -140,9 +191,10 @@ class Quiz extends React.Component {
         <Questions question={this.state.question} />
         <hr className="uk-divider-icon"></hr>
         <div className="uk-flex uk-flex-center" id="centerQuiz">
-          <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} HandleClick={this.HandleClick} chosenQuestion={this.state.question} />
+          <PlayerCard function1={this.HandleClick} name={this.state.player1.name} id={this.state.player1.id} image={this.state.player1.image} stats={this.state.player1.stats} chosenQuestion={this.state.question} />
+
           <ScoreCard score={this.state.score} brick={this.state.brick} />
-          <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} HandleClick={this.HandleClick} chosenQuestion={this.state.question} />
+          <PlayerCard function1={this.HandleClick} name={this.state.player2.name} id={this.state.player2.id} image={this.state.player2.image} stats={this.state.player2.stats} chosenQuestion={this.state.question} />
         </div>
       </div>
 

@@ -4,7 +4,7 @@ function PlayerCard(props) {
 
   // Bug: same player can be selected from players array in math.random
   return (
-    <div className="uk-card uk-card-hover uk-width-1-3@m" onClick={props.HandleClick}>
+    <div className="uk-card uk-card-hover uk-width-1-3@m" onClick={() => { props.function1(props.id) }}>
       <div className="uk-card-header">
         <div className="uk-grid-small uk-flex-middle" uk-grid>
           <div className="uk-width-1-1">
