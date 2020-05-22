@@ -1,7 +1,7 @@
 import React from "react";
 import "../pages/Quiz.css";
 import ScoreCard from "../components/quizComponents/ScoreCard";
-import PlayerCard from "../components/quizComponents/PlayerCard";
+import PlayerCard from "../components/quizComponents/playerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 import EndQuiz from "./EndQuiz";
