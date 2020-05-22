@@ -1,5 +1,4 @@
 import React from "react";
-import { PromiseProvider } from "mongoose";
 
 function Score(props) {
   // Access state and dispatch and cause this Count component to be re-rendered
