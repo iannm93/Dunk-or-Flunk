@@ -10,8 +10,8 @@ class Quiz extends React.Component {
   state = {
     player1: {},
     player2: {},
-    score: "",
-    brick: "",
+    score: 0,
+    brick: 0,
   };
 
   componentDidMount() {
@@ -105,8 +105,8 @@ class Quiz extends React.Component {
   HandleClick = (event) => {
     event.preventDefault()
     // Get the title of the clicked button
-    this.setState({ brick: +1 })
-    this.setState({ score: +1 })
+    this.setState(({ brick }) => ({brick: brick +1 }))
+    this.setState(({ score }) => ({score: score +1}))
   }
 
 
@@ -120,7 +120,7 @@ class Quiz extends React.Component {
         <div className="uk-flex uk-flex-center" id="centerQuiz">
           <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} HandleClick={this.HandleClick} />
           <ScoreCard score={this.state.score} brick={this.state.brick} />
-          <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} />
+          <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} HandleClick={this.HandleClick} />
         </div>
       </div>
 
