@@ -12,7 +12,7 @@ function ScoreCard(props) {
 
     <div className="uk-card uk-card-small uk-width-1-3@m">
       <Score score={props.score} />
-      <Brick />
+      <Brick brick={props.brick} />
       <Timer />
     </div>
 
