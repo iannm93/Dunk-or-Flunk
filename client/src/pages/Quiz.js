@@ -1,7 +1,7 @@
 import React from "react";
 import "../pages/Quiz.css";
 import ScoreCard from "../components/quizComponents/ScoreCard";
-import PlayerCard from "../components/quizComponents/PlayerCard";
+import PlayerCard from "../components/quizComponents/playerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 
@@ -11,9 +11,8 @@ class Quiz extends React.Component {
     player1: {},
     player2: {},
     score: 0,
+    brick: 0
   };
-
-
 
   componentDidMount() {
     this.searchPlayers();
@@ -85,10 +84,15 @@ class Quiz extends React.Component {
       image: players[randomNum2].src
     }
 
-    API.search(player1.id, player2.id)
+    API.search1(player1.id)
       .then((res) => {
         player1.stats = res.data.data[0];
-        player2.stats = res.data.data[1];
+      })
+      .then(()=> {
+      API.search2(player2.id)
+        .then((res) => {
+          player2.stats = res.data.data[0];
+      })
       })
       // console.log("API response", res))
       // this.setState({ player2: res.data.data[1]})
@@ -96,9 +100,6 @@ class Quiz extends React.Component {
       .then(() => this.setState({ player2: player2 }))
       .then(() => console.log(this.state))
       .catch((err) => console.log(err));
-
-
-
   }
 
   render() {
