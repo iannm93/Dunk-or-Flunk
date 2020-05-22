@@ -4,6 +4,8 @@ import ScoreCard from "../components/quizComponents/ScoreCard";
 import PlayerCard from "../components/quizComponents/PlayerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
+import EndQuiz from "./EndQuiz";
+import {Redirect} from "react-router-dom"
 
 class Quiz extends React.Component {
   //set your state of 50 players here
@@ -31,7 +33,7 @@ class Quiz extends React.Component {
     { name: "Anthony Davis", id: 117, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/ea8826b8-1f76-4eab-b61e-ffcb176880f3/headshot_1570570782.jpg" },
     { name: "Nikola Jokic", id: 246, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/f2625432-3903-4f90-9b0b-2e4f63856bb0/headshot_1570744166.jpg" },
     { name: "Russel Westbrook", id: 472, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/74a45eed-f2b0-4886-ae71-d04cf7d59528/headshot_1570734345.jpg" },
-    { name: "Damian Lillar", id: 278, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/5382cf43-3a79-4a5a-a7fd-153906fe65dd/headshot_1570575276.jpg" },
+    { name: "Damian Lillard", id: 278, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/5382cf43-3a79-4a5a-a7fd-153906fe65dd/headshot_1570575276.jpg" },
     { name: "Kyrie Irving", id: 228, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/dd146010-902b-4ad7-b98c-650d0363a2f0/headshot_1570745806.jpg" },
     { name: "Paul George", id: 172, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/db09f372-9a17-4889-add7-bf8a75ab6da6/headshot_1570731763.jpg" },
     { name: "Karl - Anthony Towns", id: 447, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/ab532a66-9314-4d57-ade7-bb54a70c65ad/headshot_1570663129.jpg" },
@@ -180,19 +182,25 @@ class Quiz extends React.Component {
 
     if (userStatsToCompare > enemyStatsToCompare) {
       this.setState(({ score }) => ({ score: score + 1 }))
-     this.randomQuestion();
-     this.searchPlayers();
+      this.randomQuestion();
+      this.searchPlayers();
     } else {
       this.setState(({ brick }) => ({ brick: brick + 1 }))
       this.randomQuestion();
       this.searchPlayers();
     }
+
     // console.log(userGuess)
+    // console.log(brick)
+  
   }
 
 
 
   render() {
+    if (this.state.brick>=3){
+      return <Redirect to = "/end"/>
+    }
     return (
       <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport Quiz" id="quizContainer" uk-grid>
         <Questions question={this.state.question} />
