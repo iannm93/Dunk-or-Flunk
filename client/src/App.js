@@ -26,6 +26,7 @@ function ProtectedRoute({ children, ...rest }) {
 }
 
 function App() {
+
   return (
     <AuthProvider>
       <Router>
@@ -46,9 +47,6 @@ function App() {
             </ProtectedRoute>
             <Route exact path="/quiz">
               <Quiz />
-            </Route>
-            <Route exact path="/end">
-              <EndQuiz />
             </Route>
           </Switch>
         </div>

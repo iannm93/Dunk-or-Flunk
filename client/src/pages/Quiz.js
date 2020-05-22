@@ -194,8 +194,8 @@ class Quiz extends React.Component {
 
 
   render() {
-    if (this.state.brick >= 3) {
-      return <Redirect to="/end" />
+    if (this.state.brick>=3){
+      return <EndQuiz score={this.state.score}/>
     }
     return (
       <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport Quiz" id="quizContainer" uk-grid>
