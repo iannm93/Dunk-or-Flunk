@@ -4,15 +4,13 @@ import ScoreCard from "../components/quizComponents/ScoreCard";
 import PlayerCard from "../components/quizComponents/PlayerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
-import axios from "axios";
 
 class Quiz extends React.Component {
   //set your state of 50 players here
   state = {
-    player1: null,
-    player2: null,
+    player1: {},
+    player2: {},
     score: 0,
-    image: null
   };
 
 
@@ -80,7 +78,6 @@ class Quiz extends React.Component {
       name: players[randomNum1].name,
       id: players[randomNum1].id,
       image: players[randomNum1].src
-      
     }
     const player2 = {
       name: players[randomNum2].name,
@@ -89,16 +86,16 @@ class Quiz extends React.Component {
     }
 
     API.search(player1.id, player2.id)
-      .then((res) =>{
-         player1.stats = res.data.data[0];
+      .then((res) => {
+        player1.stats = res.data.data[0];
         player2.stats = res.data.data[1];
-        }) 
-          // console.log("API response", res))
-          // this.setState({ player2: res.data.data[1]})
-          .then(() => this.setState({ player1: player1 }))
-          .then(() => this.setState({ player2: player2 }))
-          .then(() => console.log(this.state))
-          .catch((err) => console.log(err));
+      })
+      // console.log("API response", res))
+      // this.setState({ player2: res.data.data[1]})
+      .then(() => this.setState({ player1: player1 }))
+      .then(() => this.setState({ player2: player2 }))
+      .then(() => console.log(this.state))
+      .catch((err) => console.log(err));
 
 
 
@@ -110,9 +107,9 @@ class Quiz extends React.Component {
         <Questions />
         <hr className="uk-divider-icon"></hr>
         <div className="uk-flex uk-flex-center" id="centerQuiz">
-          <PlayerCard />
+          <PlayerCard name={this.state.player1.name} image={this.state.player1.image} stats={this.state.player1.stats} />
           <ScoreCard score={15} />
-          <PlayerCard />
+          <PlayerCard name={this.state.player2.name} image={this.state.player2.image} stats={this.state.player2.stats} />
         </div>
       </div>
 

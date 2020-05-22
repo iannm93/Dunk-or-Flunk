@@ -1,6 +1,6 @@
 import React from "react";
 
-function PlayerCard() {
+function PlayerCard(props) {
   const players = [{ name: "Kawhi Leonard", id: 274, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/c12fb587-fc86-471c-8a84-19caf31325ce/headshot_1570731868.jpg" },
   { name: "Giannis Antetokounmpo", id: 15, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/6c60282d-165a-4cba-8e5a-4f2d9d4c5905/headshot_1570735919.jpg" },
   { name: "Lebron James", id: 237, src: "https://www.google.com/search?q=Lebron+James+headshot&sxsrf=ALeKk02aBVKn4Vl_XjFx553jegcszEMSYA:1590008397899&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiJn_ztqsPpAhWNu54KHXFLC4kQ_AUoAXoECA8QAw&biw=1214&bih=626#imgrc=1mc10dvfkvirkM" },
@@ -60,12 +60,12 @@ function PlayerCard() {
       <div className="uk-card-header">
         <div className="uk-grid-small uk-flex-middle" uk-grid>
           <div className="uk-width-1-1">
-            <img className="uk-border-circle" width="auto" height="auto" src={players[randomNum].src} />
+            <img className="uk-border-circle" width="auto" height="auto" src={props.image} />
           </div>
         </div>
       </div>
       <div className="uk-card-footer white">
-        <h3 className="white">{players[randomNum].name}</h3>
+        <h3 className="white">{props.name}</h3>
       </div>
     </div>
   );
