@@ -135,7 +135,10 @@ class Quiz extends React.Component {
     // let userGuess = event.target.value
 
     // console.log(userGuess)
-    this.compareStat(userGuess);
+    this.compareStat(userGuess)
+    // .then(()=>{
+    //   this.setState({question:"hello"})
+    // });
   }
 
   compareStat = (userGuess) => {
@@ -176,9 +179,13 @@ class Quiz extends React.Component {
 
 
     if (userStatsToCompare > enemyStatsToCompare) {
-      return this.setState(({ score }) => ({ score: score + 1 }))
+      this.setState(({ score }) => ({ score: score + 1 }))
+     this.randomQuestion();
+     this.searchPlayers();
     } else {
-      return this.setState(({ brick }) => ({ brick: brick + 1 }))
+      this.setState(({ brick }) => ({ brick: brick + 1 }))
+      this.randomQuestion();
+      this.searchPlayers();
     }
     // console.log(userGuess)
   }
