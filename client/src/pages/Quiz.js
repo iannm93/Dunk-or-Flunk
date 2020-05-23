@@ -5,7 +5,6 @@ import PlayerCard from "../components/quizComponents/playerCard";
 import Questions from "../components/quizComponents/Questions";
 import API from "../utils/API";
 import EndQuiz from "./EndQuiz";
-import { Redirect } from "react-router-dom"
 
 class Quiz extends React.Component {
   //set your state of 50 players here
@@ -75,7 +74,8 @@ class Quiz extends React.Component {
 
 
     const randomNum1 = Math.floor(Math.random() * players.length);
-    const randomNum2 = Math.floor(Math.random() * players.length);
+    const restOfPlayers = [...players, !randomNum1]
+    const randomNum2 = Math.floor(Math.random() * restOfPlayers.length);
 
     const player1 = {
       name: players[randomNum1].name,
@@ -184,7 +184,10 @@ class Quiz extends React.Component {
       this.randomQuestion();
       this.searchPlayers();
     } else {
-      return this.setState(({ brick }) => ({ brick: brick + 1 }));
+      this.setState(({ brick }) => ({ brick: brick + 1 }))
+      this.randomQuestion();
+      this.searchPlayers();
+
     }
 
     // console.log(userGuess)
@@ -194,8 +197,8 @@ class Quiz extends React.Component {
 
 
   render() {
-    if (this.state.brick>=3){
-      return <EndQuiz score={this.state.score}/>
+    if (this.state.brick >= 3) {
+      return <EndQuiz score={this.state.score} />
     }
     return (
       <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport Quiz" id="quizContainer" uk-grid>
