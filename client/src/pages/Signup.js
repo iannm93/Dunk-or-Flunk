@@ -8,7 +8,8 @@ import "../pages/signup.css";
 function Signup() {
   const [formState, setFormState] = useState({
     username: "",
-    password: ""
+    password: "",
+    highScore: 0
   });
 
   const { isLoggedIn } = useAuth();

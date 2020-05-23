@@ -8,9 +8,9 @@ export default {
   signUpUser: (username, password) => {
     return axios.post("api/signup", { username, password });
   },
-  // patchUser: (id) => {
-  //   return axios.patch(`/api/user/${id}`, )
-  // }
+  patchUser: (id, highScore) => {
+    return axios.patch(`/api/user/${id}`, ({ highScore }))
+  },
   search1: function (player1) {
     const BASEURL = `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${player1}`;
     const APIKEY = "&api_key=kvydgkf6qdjye5y3xrt464xp";
