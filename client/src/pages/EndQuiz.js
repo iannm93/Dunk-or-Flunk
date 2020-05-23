@@ -14,11 +14,15 @@ function EndQuiz(props) {
     API.getUser(user.id).then(res => {
       setUsername(res.data.username);
       setScore(res.data.highScore);
-      console.log(res.data.username);
-      console.log(res.data.highScore)
+      console.log(user)
     }).then(() => {
       if (recentScore > highScore) {
         setScore(recentScore)
+        API.patchUser(user.id, highScore)
+          .then(res => {
+            console.log(`user's new highscore is ${highScore}`)
+          })
+          .catch(err => alert(err));
         //run API call to patch user data @ user.id for highScore
       }
     })
