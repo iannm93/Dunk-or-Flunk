@@ -33,14 +33,12 @@ function EndQuiz(props) {
 
   return (
     <div>
-      <div className='uk-heading-medium uk-text-center uk-margin-large-top'>
-        <h1>Nice game, {username}!</h1>
+      <div className='uk-margin-medium-top'>
+      <h1>Nice game, {username}!</h1>
       </div>
-      <div className='uk-flex uk-flex-center'>
-        <div className="uk-margin-top uk-card uk-card-primary uk-card-body uk-width-3-4">
-          <h1 className="uk-text-center">This Round's Score: {recentScore}</h1>
-          
-        </div>
+      
+      <div class="uk-margin-medium-top uk-width-xlarge uk-margin">
+        <div class="uk-card uk-card-small uk-card-default uk-card-body">X-Large</div>
       </div>
 
       <div className='uk-text-center uk-margin-medium-top'>
