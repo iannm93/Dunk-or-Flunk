@@ -21,7 +21,7 @@ const UserSchema = new Schema({
   },
   highScore: {
     type: Number,
-    default: 0,
+    default: null,
   },
 });
 
