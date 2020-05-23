@@ -7,15 +7,18 @@ function EndQuiz(props) {
   const [username, setUsername] = useState("");
   const [highScore, setScore] = useState("");
   const { user } = useAuth();
+  const recentScore = props.score;
 
   //On page load we do useEffect to do a getUser
-  useEffect((props, highScore) => {
+  useEffect(() => {
     API.getUser(user.id).then(res => {
       setUsername(res.data.username);
       setScore(res.data.highScore);
-    }).then((props, highScore) => {
-      if (props.score > highScore) {
-        setScore(props.score)
+      console.log(res.data.username);
+      console.log(res.data.highScore)
+    }).then(() => {
+      if (recentScore > highScore) {
+        setScore(recentScore)
         //run API call to patch user data @ user.id for highScore
       }
     })
@@ -35,7 +38,7 @@ function EndQuiz(props) {
       </div>
       <div className='uk-flex uk-flex-center'>
         <div className="uk-margin-top uk-card uk-card-primary uk-card-body uk-width-3-4">
-          <h1 className="uk-text-center">This Round's Score: {props.score}</h1>
+          <h1 className="uk-text-center">This Round's Score: {recentScore}</h1>
           <h1 className="uk-text-center">Your Best Score: {highScore}</h1>
         </div>
       </div>
