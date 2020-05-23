@@ -44,7 +44,7 @@ function EndQuiz(props) {
       </div>
 
       <div className='uk-text-center uk-margin-medium-top'>
-        <a className="uk-link" href="#">Play Again?</a>
+        <a className="uk-link" href="/quiz">Play Again?</a>
       </div>
 
       <div className='uk-text-center uk-margin-top'>
