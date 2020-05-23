@@ -32,7 +32,8 @@ a:hover {
 /* Using !important to override whatever uikit had as priority for cards */
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
   background: transparent !important;
-  cursor: pointer;
+  /* cursor: url("https://www.pikpng.com/pngl/m/336-3369800_2-years-ago-crying-jordan-face-png-clipart.png"), auto; */
+   cursor: url(http://cur.cursors-4u.net/smilies/smi-3/smi207.cur), auto !important;
 }
 
 
@@ -54,6 +55,8 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+  
 
 }
 

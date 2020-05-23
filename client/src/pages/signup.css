@@ -38,14 +38,17 @@ p{
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
+    cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
   }
   /* submit button */
 .btn{
 color: red;
 font-size: large;
 font-weight: 800;
-border:dashed
+border:dashed;
+cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
 .uk-card-body{
     margin-top:-5rem;
+    cursor:url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
