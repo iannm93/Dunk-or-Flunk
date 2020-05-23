@@ -39,7 +39,7 @@ function EndQuiz(props) {
       <div className='uk-flex uk-flex-center'>
         <div className="uk-margin-top uk-card uk-card-primary uk-card-body uk-width-3-4">
           <h1 className="uk-text-center">This Round's Score: {recentScore}</h1>
-          <h1 className="uk-text-center">Your Best Score: {highScore}</h1>
+          
         </div>
       </div>
 
