@@ -5,11 +5,11 @@ export default {
     return axios.get(`/api/user/${id}`);
   },
   // sign up a user to our service
-  signUpUser: (username, password) => {
-    return axios.post("api/signup", { username, password });
+  signUpUser: (username, password, highScore) => {
+    return axios.post("api/signup", { username, password, highScore });
   },
   patchUser: (id, highScore) => {
-    return axios.patch(`/api/user/${id}`, ({ highScore }))
+    return axios.patch(`/api/user/${id}`, { highScore: highScore })
   },
   search1: function (player1) {
     const BASEURL = `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${player1}`;

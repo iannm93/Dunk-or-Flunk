@@ -5,34 +5,49 @@ import API from "../utils/API";
 
 function EndQuiz(props) {
   const [username, setUsername] = useState("");
-  const [highScore, setScore] = useState("");
+  const [highScore, setScore] = useState(1);
   const { user } = useAuth();
   const recentScore = props.score;
 
   //On page load we do useEffect to do a getUser
   useEffect(() => {
-    API.getUser(user.id).then(res => {
+    API.getUser(user.id).then((res) => {
+      console.log(res.data.username)
+      console.log(res.data.highScore)
+      console.log(res.data)
+
       setUsername(res.data.username);
       setScore(res.data.highScore);
-      console.log(user)
-    }).then(() => {
-      if (recentScore > highScore) {
-        setScore(recentScore)
-        API.patchUser(user.id, highScore)
-          .then(res => {
-            console.log(`user's new highscore is ${highScore}`)
-          })
-          .catch(err => alert(err));
-        //run API call to patch user data @ user.id for highScore
-      }
     })
+      .then(() => {
+        console.log(username)
+        console.log(highScore)
+
+        if (recentScore > highScore) {
+          console.log(recentScore);
+          console.log(highScore)
+          setScore(recentScore)
+          console.log(user.id)
+          API.patchUser(user.id, highScore).then((res) => {
+            console.log("value stored")
+          })
+        }
+      })
     //Want to do a .then AFTER we have all available info
     //After api call happens and highScore state is set
     //Run if statement comparing props.score and highScore
     //IF props.score > highScore, have props.score display at both recent score
     //and highest score, as well as patch user data for high score at usedr.id
     //ELSE have props.score display at recent score and highScore display at highest score
-  }, [user]);
+  }, [user])
+
+  // API.patchUser(user.id, user.highScore)
+  //   .then(res => {
+  //     console.log(`user's new highscore is ${highScore}`)
+  //   })
+  //run API call to patch user data @ user.id for highScore
+
+
 
 
   return (
