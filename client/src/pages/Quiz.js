@@ -25,7 +25,7 @@ class Quiz extends React.Component {
     const players = [
       { name: "Kawhi Leonard", id: 274, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/c12fb587-fc86-471c-8a84-19caf31325ce/headshot_1570731868.jpg" },
       { name: "Giannis Antetokounmpo", id: 15, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/6c60282d-165a-4cba-8e5a-4f2d9d4c5905/headshot_1570735919.jpg" },
-      { name: "Lebron James", id: 237, src: "https://www.google.com/search?q=Lebron+James+headshot&sxsrf=ALeKk02aBVKn4Vl_XjFx553jegcszEMSYA:1590008397899&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiJn_ztqsPpAhWNu54KHXFLC4kQ_AUoAXoECA8QAw&biw=1214&bih=626#imgrc=1mc10dvfkvirkM" },
+      { name: "Lebron James", id: 237, src: "https://cdn.britannica.com/65/12565-050-B102B3A8/crown-Denmark-helmet-form-enamel-gold-stones-1670.jpg" },
       // fix
       { name: "James Harden	", id: 192, src: "https://s3-us-west-2.amazonaws.com/osdb-dev-2/headShots/a52b2c84-9c3d-4d6e-8a3b-10e75d11c2bc/205x205-crop.JPG" },
       { name: "Stephen Curry", id: 115, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/8ec91366-faea-4196-bbfd-b8fab7434795/headshot_1570738675.jpg" },
@@ -73,10 +73,8 @@ class Quiz extends React.Component {
       { name: "Bojan Bogdonovic", id: 54, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/7ff02e19-e829-4e56-9a34-233a71fce76c/headshot_1570558387.jpg" },
     ];
 
-    console.log(players)
     const randomNum1 = (Math.floor(Math.random() * players.length));
     const randomNum1Index = randomNum1
-    console.log(randomNum1Index)
 
     const player1 = {
       name: players[randomNum1].name,
@@ -84,11 +82,9 @@ class Quiz extends React.Component {
       image: players[randomNum1].src
     };
 
-    const restOfPlayers = players.splice(randomNum1Index, 1);
-    console.log(players)
+    const playerRemoved = players.splice(randomNum1Index, 1);
     const randomNum2 = Math.floor(Math.random() * players.length);
 
-    console.log(restOfPlayers)
     const player2 = {
       name: players[randomNum2].name,
       id: players[randomNum2].id,
