@@ -21,6 +21,7 @@ class Quiz extends React.Component {
     this.searchPlayers();
   }
 
+
   searchPlayers = () => {
     const players = [
       { name: "Kawhi Leonard", id: 274, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/c12fb587-fc86-471c-8a84-19caf31325ce/headshot_1570731868.jpg" },
