@@ -23,15 +23,24 @@
   background-color: #c82d2d;
   border: none;
   color: white;
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
 #viewhighbtn {
-  background-color: #c82d2d;
+  background-color: lightskyblue;
   border: none;
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.homebtns {
+  margin-top: 20%;
+  margin-left: 32%;
+
 }
+
+#reminder {
+  margin-top: 10%;
+}
+
+

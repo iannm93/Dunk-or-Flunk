@@ -46,7 +46,7 @@ function EndQuiz(props) {
 
   return (
    <div>
-   <div className='container align-middle'>
+   <div className='container' id="endcontainer">
 
     <h1 className='text-center'>Nice game, {username}!</h1>
      
