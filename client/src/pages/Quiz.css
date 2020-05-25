@@ -41,9 +41,14 @@ a:hover {
   background: rgba(0,0,0,0.5) url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
   background-blend-mode: darken;
   background-size: cover;
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
   cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+}
+
+#score-card {
+  text-align: center;
 }
 
 @media only screen and (max-width: 320px) {

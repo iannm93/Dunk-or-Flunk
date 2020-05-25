@@ -10,7 +10,7 @@ function ScoreCard(props) {
 
   return (
 
-    <div className="uk-card uk-card-small uk-width-1-3@m">
+    <div id="score-card" className="uk-card uk-card-small uk-width-1-3@m">
       <Score score={props.score} />
       <Brick brick={props.brick} />
       <Timer />

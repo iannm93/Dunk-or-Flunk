@@ -3,13 +3,13 @@ h1{
     text-align:center;
 }
 /* LOGIN TITLE */
-h2{
+/* .Login h2{
     text-align: center;
     font-family: monospace;
     color: red;
     text-decoration: underline;
     font-weight: bolder;
-}
+} */
 /* username/password */
 form{
     text-align: center;
