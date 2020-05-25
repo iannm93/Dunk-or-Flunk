@@ -48,6 +48,10 @@ a:hover {
   cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
 
+#score-card {
+  text-align: center;
+}
+
 @media only screen and (max-width: 320px) {
   style-element {
     font-size: 10px;
