@@ -74,3 +74,9 @@ cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
     text-align: center;
     margin-top: 10px;
 }
+.Signup img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
