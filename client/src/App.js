@@ -10,7 +10,7 @@ import {
 import { AuthProvider, useAuth } from "./utils/auth";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
-import Signup from "./pages/Signup";
+import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Home";
 // import Navbar from "./components/Navbar";
 import Quiz from "./pages/Quiz/Quiz";

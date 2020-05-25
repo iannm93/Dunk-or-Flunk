@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
-import API from "../utils/API";
-import { useAuth } from "../utils/auth";
-import "../pages/signup.css";
-import Logo from "./logo.png"
+import API from "../../utils/API";
+import { useAuth } from "../../utils/auth";
+import "../Signup/signup.css";
+import Logo from "../logo.png"
 
 
 function Signup() {
