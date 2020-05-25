@@ -1,5 +1,5 @@
 /* DUNK OR FLUNK TITLE */
-h1{
+.Login h2{
     text-align:center;
 }
 /* LOGIN TITLE */
@@ -26,13 +26,14 @@ form{
 /* image for background */
 #loginContainer{
     color:black;
-    background-image: url("https://cellularnews.com/wp-content/uploads/2020/03/basketball-dark-325x485.jpg");
+    background: rgba(0,0,0,0.5) url("https://cellularnews.com/wp-content/uploads/2020/03/basketball-dark-325x485.jpg");
     background-size: cover;
+    background-blend-mode: darken;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: black;
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
-  }
+    position: absolute;
+}
   /* submit button */
   .btn{
       color: red;
@@ -43,6 +44,7 @@ form{
   }
 
 #login-logo {
+    align-self: center;
     margin-top: 45px;
 }
 
@@ -51,7 +53,7 @@ form{
     bottom: 17px;
     color: #c82d2d;
     text-decoration: none;
-
+    text-align: center;
 }
 
 #login-btn {

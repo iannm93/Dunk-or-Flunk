@@ -8,8 +8,8 @@ export default {
   signUpUser: (username, password, highScore) => {
     return axios.post("api/signup", { username, password, highScore });
   },
-  patchUser: (id, highScore) => {
-    return axios.patch(`/api/user/${id}`, { highScore: highScore })
+  patchUser: (_id, highScore) => {
+    return axios.patch(`/api/users/${_id}`, { highScore: highScore })
   },
   search1: function (player1) {
     const BASEURL = `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${player1}`;
