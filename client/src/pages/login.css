@@ -16,18 +16,18 @@ form{
     font-family: monospace;
 }
 /* go to signup page */
-.Login p{
+/* .Login p{
     text-align:center;
     text-decoration: underline;
     margin-left: 3rem;
     font-family: monospace;
     font-size: xx-large;
-}
+} */
 /* image for background */
 #loginContainer{
     color:black;
-    background-image: url("https://www.ecopetit.cat/wpic/mpic/165-1657200_baller-silhouette-photography-of-man-dunking-basketball-basketball.jpg");
-    background-size: contain;
+    background-image: url("https://cellularnews.com/wp-content/uploads/2020/03/basketball-dark-325x485.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
@@ -41,3 +41,30 @@ form{
       border: dashed;
       cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
   }
+
+#login-logo {
+    margin-top: 45px;
+}
+
+#login-head {
+    position: relative;
+    bottom: 17px;
+    color: #c82d2d;
+    text-decoration: none;
+
+}
+
+#login-btn {
+    background-color: #c82d2d;
+    border: none;
+    color: white;
+}
+
+#gotosignup {
+    color: #c82d2d;
+    font-size: 15px;
+    position: relative;
+    left: 115px;
+    bottom: 10px
+}
+
