@@ -31,7 +31,7 @@ function EndQuiz(props) {
   useEffect(() => {
     if (recentScore > highScore) {
       setScore(recentScore)
-      API.patchUser(user.id, recentScore).then((res) => {
+      API.patchUser(user.id, highScore).then((res) => {
         console.log("value stored")
       })
     }
