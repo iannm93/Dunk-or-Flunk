@@ -50,7 +50,7 @@ function EndQuiz(props) {
 
     <h1 className='text-center'>Nice game, {username}!</h1>
      
-    <div className="card">
+    <div id="end-score-card" className="card">
       <div className="card-body">
     <h2 id="end-score">Score: {recentScore}</h2>
     </div>
