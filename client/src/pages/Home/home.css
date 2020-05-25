@@ -37,12 +37,14 @@
   background-color: #c82d2d;
   border: none;
   color: white;
+  margin-left: -7rem;
 }
 
 #viewhighbtn {
   background-color: lightskyblue;
   border: none;
   color: white;
+  margin-right: 7rem;
   
 }
 
