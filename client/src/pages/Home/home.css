@@ -18,6 +18,18 @@
   font-size: large;
 }
 
+#home-logo {
+  height: 200px;
+  width: 200px;
+}
+
+#logout {
+  float: left;
+}
+
+#gotoprofile {
+  float: right;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
