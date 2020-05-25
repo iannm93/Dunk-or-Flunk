@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import API from "../utils/API";
+import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { useAuth } from "../utils/auth";
-import "../pages/profile.css"
+import { useAuth } from "../../utils/auth";
+import "../Profile/profile.css"
 
 function Profile() {
   const [username, setUsername] = useState("");
