@@ -38,12 +38,14 @@
   background-color: #c82d2d;
   border: none;
   color: white;
+  cursor: url(http://cur.cursors-4u.net/smilies/smi-3/smi207.cur), auto !important;
 }
 
 #viewhighbtn {
   background-color: lightskyblue;
   border: none;
   color: white;
+  cursor: url ("https://img.icons8.com/flat_round/64/000000/trophy--v1.png", auto)
 }
 
 .homebtns {
