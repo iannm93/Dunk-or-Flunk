@@ -15,7 +15,7 @@
  text-decoration: none;
 }
 .Quiz h2 {
-  margin-top: 2rem !important;
+  margin-top: 6rem !important;
 }
 .Quiz h3 {
   font-size: 2em;
@@ -64,12 +64,27 @@ a:hover {
   text-align: center;
 }
 .Quiz img {
-  max-width: 275px;
-  height:275px;
-  width: 275px;
+  max-width: 400px;
+  height:400px;
+  width: 400px;
 }
 .Quiz .uk-width-1-1 {
   justify-content: center;
+}
+
+@media only screen and (max-height: 900px) {
+  .Quiz img {
+    max-width: 275px;
+    height:275px;
+    width: 275px;
+  }
+  .Quiz h3 {
+    font-size: 2rem;
+  }
+
+  .Quiz h2 {
+    margin-top: 3rem !important;
+  }
 }
 
 @media only screen and (max-height: 640px) {
@@ -80,5 +95,9 @@ a:hover {
   }
   .Quiz h3 {
     font-size: 1.5rem;
+  }
+
+  .Quiz h2 {
+    margin-top: 1.5rem !important;
   }
 }
