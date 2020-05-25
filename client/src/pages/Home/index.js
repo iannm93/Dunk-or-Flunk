@@ -24,6 +24,7 @@ function Home() {
         <img id="home-logo" src={Logo}></img>
 
         <h2 id="welcome">Welcome, {user.username}!</h2>
+        <p>Welcome to Dunk or Flunk, the NBA statistics quiz! When the quiz begins, click or press the player headshot corresponding with the correct statistic. Every time the correct headshot is clicked, you will get a point. Every time the incorrect headshot is clicked, you will get a brick. Three bricks and you go home. Good luck! </p>
         
         <div className="homebtns">
 
