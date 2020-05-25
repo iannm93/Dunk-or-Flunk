@@ -31,9 +31,9 @@ function EndQuiz(props) {
   useEffect(() => {
     if (recentScore > highScore) {
       setScore(recentScore)
-      // API.patchUser(user.id, highScore).then((res) => {
-      //   console.log("value stored")
-      // })
+      API.patchUser(user.id, recentScore).then((res) => {
+        console.log("value stored")
+      })
     }
   }, [recentScore, highScore]);
 
@@ -57,19 +57,28 @@ function EndQuiz(props) {
   </div>
   <p>High Score: {highScore}</p>
 
-      <div className='uk-text-center'>
-        <a className="uk-link" href="/quiz">Play Again?</a>
-      </div>
+        <h1 className='text-center'>Nice game, {username}!</h1>
 
-      <div className='uk-text-center uk-margin-top'>
-        <SocialIcon network='twitter' url=" https://twitter.com/intent/tweet?url=https%3A%2F%2Fplaceholder.com%2F&text=I%20scored%205%20on%20Dunk%20or%20Flunk%21%20Play%20it%20now%21" target="_blank" className='uk-margin-small-right' />
-        <SocialIcon url="https://facebook.com/" target="_blank" />
+        <div className="card">
+          <div className="card-body">
+            <h2 id="end-score">Score: {recentScore}</h2>
+          </div>
+        </div>
+        <p>High Score: {highScore}</p>
+
+        <div className='uk-text-center'>
+          <a className="uk-link" href="/quiz">Play Again?</a>
+        </div>
+
+        <div className='uk-text-center uk-margin-top'>
+          <SocialIcon network='twitter' url=" https://twitter.com/intent/tweet?url=https%3A%2F%2Fplaceholder.com%2F&text=I%20scored%205%20on%20Dunk%20or%20Flunk%21%20Play%20it%20now%21" target="_blank" className='uk-margin-small-right' />
+          <SocialIcon url="https://facebook.com/" target="_blank" />
+        </div>
+
       </div>
 
     </div>
-  
-    </div>
-    
+
 
   );
 }

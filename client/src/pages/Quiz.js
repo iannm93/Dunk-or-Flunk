@@ -206,7 +206,7 @@ class Quiz extends React.Component {
       return <EndQuiz score={this.state.score} />
     }
     return (
-      <div className="uk-grid-medium uk-width-*@s Quiz" id="quizContainer" uk-grid>
+      <div className="uk-grid-medium uk-child-width-expand@s uk-height-viewport uk-width-viewport Quiz" id="quizContainer" uk-grid>
         <Questions question={this.state.question} />
         <hr className="uk-divider-icon"></hr>
         <div className="uk-flex uk-flex-center" id="centerQuiz">
