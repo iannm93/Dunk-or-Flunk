@@ -62,7 +62,7 @@ function EndQuiz(props) {
         </div>
 
         <div className='uk-text-center uk-margin-top'>
-          <SocialIcon network='twitter' url=" https://twitter.com/intent/tweet?url=https%3A%2F%2Fplaceholder.com%2F&text=I%20scored%205%20on%20Dunk%20or%20Flunk%21%20Play%20it%20now%21" target="_blank" className='uk-margin-small-right' />
+          <SocialIcon network='twitter' url=" https://twitter.com/intent/tweet?url=https%3A%2F%2Fhttps://pacific-ravine-02228.herokuapp.com/signup%2F&text=I%20just%20played%20Dunk%20or%20Flunk%21%20Play%20it%20now%21" target="_blank" className='uk-margin-small-right' />
           <SocialIcon url="https://facebook.com/" target="_blank" />
         </div>
 
