@@ -13,19 +13,17 @@ function Home() {
   const goToEditProfile = () => history.push("/profile");
 
   return (
-    <div className="App">
+    <div className="homecontainer">
         <p>
           <a id="logout" onClick={() => logout()}>Log Out</a>
           <span>
-            <p>
-          <Link id="gotoprofile" >Profile</Link>
-            </p>
+            <p id="gotoprofile" onClick={() => history.push("/profile")}>Profile</p>
           </span>
         </p>
 
         <img id="home-logo" src={Logo}></img>
 
-        <h2>Welcome, {user.username}!</h2>
+        <h2 id="welcome">Welcome, {user.username}!</h2>
         
         <div className="homebtns">
 
