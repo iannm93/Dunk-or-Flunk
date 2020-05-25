@@ -15,14 +15,14 @@ form{
     font-family: monospace;
 }
 /* p = link to login */
-.Signup p{
+/* .Signup p{
     text-align: center;
     margin:2rem;
     font-weight: 700;
     margin-left: 3rem;
     font-size: xx-large;
     font-family: monospace;
-}
+} */
 /* image for background */
 #signupContainer{
     color:black;
@@ -66,4 +66,10 @@ cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 
 #gotologin {
     color: #c82d2d;
+    font-size: 15px;
+}
+
+.Signup p {
+    text-align: center;
+    margin-top: 10px;
 }

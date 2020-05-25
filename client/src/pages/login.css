@@ -16,13 +16,13 @@ form{
     font-family: monospace;
 }
 /* go to signup page */
-.Login p{
+/* .Login p{
     text-align:center;
     text-decoration: underline;
     margin-left: 3rem;
     font-family: monospace;
     font-size: xx-large;
-}
+} */
 /* image for background */
 #loginContainer{
     color:black;
@@ -62,8 +62,9 @@ form{
 
 #gotosignup {
     color: #c82d2d;
+    font-size: 15px;
     position: relative;
-    left: 110px;
-    font-family: monospace;
-    font-weight: bolder;
+    left: 115px;
+    bottom: 10px
 }
+
