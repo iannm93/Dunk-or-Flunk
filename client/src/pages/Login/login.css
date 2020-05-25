@@ -32,6 +32,7 @@ form{
     background-position: center;
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
     position: absolute;
+    
 }
   /* submit button */
   .btn{
@@ -75,5 +76,3 @@ form{
     margin-right: auto;
     width: 50%;
 }
-
-Login html{background: black;}
