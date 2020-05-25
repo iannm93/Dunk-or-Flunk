@@ -3,6 +3,7 @@ import { Link, Redirect, useHistory } from "react-router-dom";
 import API from "../utils/API";
 import { useAuth } from "../utils/auth";
 import "../pages/signup.css";
+import Logo from "./logo.png"
 
 
 function Signup() {
@@ -42,8 +43,8 @@ function Signup() {
   return (
     <div className="uk-cover-container uk-height-viewport Signup" id="signupContainer">
       <div className="uk-card uk-card-body">
-        <h1>Dunk or Flunk</h1>
-        <h2>Signup</h2>
+      <img id="signup-logo" src={Logo}></img>
+        <h2 id="signup-head">Signup</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="uk-margin">
             <div className="uk-inline">
@@ -67,12 +68,12 @@ function Signup() {
                 onChange={handleChange}></input>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" id="signup-btn">
             Submit
           </button>
         </form>
         <p>
-          <Link to="/login">Go to Login</Link>
+          <Link id="gotologin" to="/login">Go to Login</Link>
         </p>
       </div>
     </div>
@@ -80,49 +81,3 @@ function Signup() {
 }
 
 export default Signup;
-
-/* <div className="container">
-<h1>Signup</h1>
-<form onSubmit={handleFormSubmit}>
-  <div className="form-group">
-    <label htmlFor="username">Username:</label>
-    <input
-      className="form-control"
-      placeholder="Username goes here..."
-      name="username"
-      type="text"
-      id="username"
-      onChange={handleChange}
-      />
-  </div>
-  <div className="form-group">
-    <label htmlFor="email">Email address:</label>
-    <input
-      className="form-control"
-      placeholder="Email goes here..."
-      name="email"
-      type="email"
-      id="email"
-      onChange={handleChange}
-      />
-  </div>
-  <div className="form-group">
-    <label htmlFor="pwd">Password:</label>
-    <input
-      className="form-control"
-      placeholder="Password goes here..."
-      name="password"
-      type="password"
-      id="pwd"
-      onChange={handleChange}
-      />
-  </div>
-  <button type="submit" className="btn btn-primary">
-    Submit
-  </button>
-</form>
-<p>
-  <Link to="/login">Go to Login</Link>
-</p>
-</div> */
-//lets give this a go and see
