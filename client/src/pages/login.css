@@ -16,7 +16,7 @@ form{
     font-family: monospace;
 }
 /* go to signup page */
-p{
+.Login p{
     text-align:center;
     text-decoration: underline;
     margin-left: 3rem;
