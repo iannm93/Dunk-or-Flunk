@@ -1,0 +1,14 @@
+.card-body {
+    background-color: cornflowerblue;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+#end-score {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}

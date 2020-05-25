@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 import "uikit/dist/css/uikit.css";
+import "uikit/dist/js/uikit.js"
+import "bootstrap/dist/css/bootstrap.css"
 
 
 import "./index.css";
