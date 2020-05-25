@@ -19,6 +19,7 @@ class Quiz extends React.Component {
   componentDidMount() {
     this.randomQuestion();
     this.searchPlayers();
+    screen.lockOrientation('landscape');
   }
 
 
