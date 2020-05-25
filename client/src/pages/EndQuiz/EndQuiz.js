@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
-import { useAuth } from "../utils/auth";
-import API from "../utils/API";
-import Logo from "./logo.png"
-import "../pages/end.css"
+import { useAuth } from "../../utils/auth";
+import API from "../../utils/API";
+import Logo from "../logo.png"
+import "../EndQuiz/end.css"
 
 function EndQuiz(props) {
   const [username, setUsername] = useState("");
@@ -45,17 +45,8 @@ function EndQuiz(props) {
 
 
   return (
-   <div>
-   <div className='container' id="endcontainer">
-
-    <h1 className='text-center'>Nice game, {username}!</h1>
-     
-    <div id="end-score-card" className="card">
-      <div className="card-body">
-    <h2 id="end-score">Score: {recentScore}</h2>
-    </div>
-  </div>
-  <p>High Score: {highScore}</p>
+    <div>
+      <div className='container align-middle'>
 
         <h1 className='text-center'>Nice game, {username}!</h1>
 
