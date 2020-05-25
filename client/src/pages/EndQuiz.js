@@ -45,8 +45,17 @@ function EndQuiz(props) {
 
 
   return (
-    <div>
-      <div className='container align-middle'>
+   <div>
+   <div className='container' id="endcontainer">
+
+    <h1 className='text-center'>Nice game, {username}!</h1>
+     
+    <div id="end-score-card" className="card">
+      <div className="card-body">
+    <h2 id="end-score">Score: {recentScore}</h2>
+    </div>
+  </div>
+  <p>High Score: {highScore}</p>
 
         <h1 className='text-center'>Nice game, {username}!</h1>
 

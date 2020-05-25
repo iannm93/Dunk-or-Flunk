@@ -13,24 +13,34 @@ function Home() {
   const goToEditProfile = () => history.push("/profile");
 
   return (
-    <div className="App">
+    <div className="homecontainer">
         <p>
-          <a id="logout"  onClick={() => logout()}>Log Out</a>
+          <a id="logout" onClick={() => logout()}>Log Out</a>
           <span>
-            <p>
-          <Link id="gotoprofile" >Profile</Link>
-            </p>
+            <p id="gotoprofile" onClick={() => history.push("/profile")}>Profile</p>
           </span>
         </p>
 
         <img id="home-logo" src={Logo}></img>
 
-        <h2>Welcome, {user.username}!</h2>
+        <h2 id="welcome">Welcome, {user.username}!</h2>
+        
+        <div className="homebtns">
 
-        <button type="button" className="btn btn-primary" id="playnowbtn" to="/quiz">Play Now!</button>
-      
-        <button type="button" className="btn btn-danger" id="viewhighbtn">View Highscores </button>
-    
+          <div className='row'>
+            <button type="button" className="btn btn-danger" id="viewhighbtn">View Highscores </button>
+          </div>
+
+          <div className='row'>
+            <button type="button" className="btn btn-primary" id="playnowbtn" onClick={() => history.push("/quiz")}>Play Now!</button>
+          </div>
+
+        </div>
+
+        <div>
+          <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
+        </div>
+        
     </div>
   );
 }

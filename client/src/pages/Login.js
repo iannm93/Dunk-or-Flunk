@@ -18,7 +18,7 @@ function Login() {
 
     login(username, password)
       // navigate to the profile page
-      .then(() => history.push("/quiz"))
+      .then(() => history.push("/"))
       .catch(err => {
         alert(err.response.data.message);
       });

@@ -1,5 +1,9 @@
-.App {
+.homecontainer {
   text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  position: absolute;
 }
 
 .App-intro {
@@ -7,31 +11,54 @@
 }
 
 #home-logo {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
+  
+}
+
+#welcome {
+  margin-top: 5%;
+  
 }
 
 #logout {
   float: left;
+  color: black;
+  
 }
 
 #gotoprofile {
   float: right;
+  color: black;
+  
 }
 
 #playnowbtn {
   background-color: #c82d2d;
   border: none;
   color: white;
+  margin-top: 10%;
+  margin-left: 10%;
+  
 }
 
 #viewhighbtn {
-  background-color: #c82d2d;
+  background-color: lightskyblue;
   border: none;
   color: white;
+  
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.homebtns {
+  margin-top: 25%;
+  margin-left: 32%;
+  
+
 }
+
+#reminder {
+  margin-top: 60%;
+  
+}
+
+
