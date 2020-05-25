@@ -22,25 +22,15 @@ function Home() {
             </p>
           </span>
         </p>
+
         <img id="home-logo" src={Logo}></img>
+
         <h2>Welcome, {user.username}!</h2>
+
+        <button type="button" className="btn btn-primary" id="playnowbtn" to="/quiz">Play Now!</button>
       
-      <p className="App-intro">
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={goToEditProfile}
-        >
-          Go to Profile
-        </button>
-        <button
-          type="button"
-          className="btn btn-danger"
-          onClick={() => logout()}
-        >
-          Logout
-        </button>
-      </p>
+        <button type="button" className="btn btn-danger" id="viewhighbtn">View Highscores </button>
+    
     </div>
   );
 }
