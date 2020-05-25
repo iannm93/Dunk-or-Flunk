@@ -1,5 +1,5 @@
 import React from "react";
-import "../../pages/Quiz.css";
+import "../../pages/Quiz/Quiz.css";
 
 function Questions(props) {
 

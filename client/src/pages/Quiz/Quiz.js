@@ -1,10 +1,10 @@
 import React from "react";
-import "../pages/Quiz.css";
-import ScoreCard from "../components/quizComponents/ScoreCard";
-import PlayerCard from "../components/quizComponents/playerCard";
-import Questions from "../components/quizComponents/Questions";
-import API from "../utils/API";
-import EndQuiz from "./EndQuiz/EndQuiz";
+import "../Quiz/Quiz.css";
+import ScoreCard from "../../components/quizComponents/ScoreCard";
+import PlayerCard from "../../components/quizComponents/playerCard";
+import Questions from "../../components/quizComponents/Questions";
+import API from "../../utils/API";
+import EndQuiz from "../EndQuiz/EndQuiz";
 
 class Quiz extends React.Component {
   //set your state of 50 players here
