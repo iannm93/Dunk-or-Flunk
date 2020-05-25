@@ -1,6 +1,7 @@
 .uk-card-footer {
   text-align: center;
 }
+.Quiz html { font-size: 1vw; }
 /* html { 
   background: url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -14,7 +15,7 @@
  text-decoration: none;
 }
 .Quiz h2 {
-  margin-top: 6rem !important;
+  margin-top: 2rem !important;
 }
 #header {
   padding-top: 10px;
@@ -31,7 +32,7 @@ a:hover {
   padding-top: 10px;
 }
 .PvP {
-  margin-top: 50px;
+  margin-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
@@ -46,8 +47,12 @@ a:hover {
   cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
 
-@media only screen and (max-width: 320px) {
-  style-element {
-    font-size: 10px;
-  }
+#score-card {
+  text-align: center;
 }
+
+/* @media only screen and (max-height: 1100px) {
+  #quizContainer {
+    height: 50%;
+  }
+} */
