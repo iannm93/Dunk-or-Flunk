@@ -14,7 +14,7 @@ function PlayerCard(props) {
         </div>
       </div>
       <div className="uk-card-footer white">
-        <h3 className="white">{props.name}</h3>
+        <h4 className="white">{props.name}</h4>
       </div>
     </div>
   );
