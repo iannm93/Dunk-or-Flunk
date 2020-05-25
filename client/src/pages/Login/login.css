@@ -28,7 +28,6 @@ form{
     color:black;
     background: rgba(0,0,0,0.5) url("https://cellularnews.com/wp-content/uploads/2020/03/basketball-dark-325x485.jpg");
     background-size: cover;
-    background-blend-mode: darken;
     background-repeat: no-repeat;
     background-position: center;
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
@@ -66,7 +65,15 @@ form{
     color: #c82d2d;
     font-size: 15px;
     position: relative;
-    left: 115px;
+    /* left: 115px; */
     bottom: 10px
 }
 
+.Login img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+Login html{background: black;}

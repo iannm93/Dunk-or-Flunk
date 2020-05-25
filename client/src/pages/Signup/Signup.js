@@ -71,10 +71,10 @@ function Signup() {
           <button type="submit" className="btn btn-primary" id="signup-btn">
             Submit
           </button>
-        </form>
         <p>
           <Link id="gotologin" to="/login">Go to Login</Link>
         </p>
+        </form>
       </div>
     </div>
   );
