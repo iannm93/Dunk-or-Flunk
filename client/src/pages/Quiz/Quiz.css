@@ -17,6 +17,9 @@
 .Quiz h2 {
   margin-top: 2rem !important;
 }
+.Quiz h3 {
+  font-size: 2em;
+}
 #header {
   padding-top: 10px;
 }
@@ -38,6 +41,13 @@ a:hover {
   text-align: center;
 }
 #quizContainer {
+  position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
   color: white;
   background: rgba(0,0,0,0.5) url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
   background-blend-mode: darken;
@@ -46,13 +56,29 @@ a:hover {
   background-position: center;
   cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
+.Quiz hr {
+  margin: 0em;
+}
 
 #score-card {
   text-align: center;
 }
+.Quiz img {
+  max-width: 275px;
+  height:275px;
+  width: 275px;
+}
+.Quiz .uk-width-1-1 {
+  justify-content: center;
+}
 
-/* @media only screen and (max-height: 1100px) {
-  #quizContainer {
-    height: 50%;
+@media only screen and (max-height: 640px) {
+  .Quiz img {
+    max-width: 125px;
+    height: 125px;
+    width: 125px;
   }
-} */
+  .Quiz h3 {
+    font-size: 1.5rem;
+  }
+}
