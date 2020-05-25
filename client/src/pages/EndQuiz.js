@@ -58,9 +58,10 @@ function EndQuiz(props) {
      
     <div className="card">
       <div className="card-body">
-    <h2>Score: {score}</h2>
+    <h2>Score: {recentScore}</h2>
     </div>
-</div>
+  </div>
+  <p>High Score: {highScore}</p>
 
       <div className='uk-text-center uk-margin-medium-top'>
         <a className="uk-link" href="/quiz">Play Again?</a>
