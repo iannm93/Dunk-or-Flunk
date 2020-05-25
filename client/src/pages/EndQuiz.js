@@ -45,25 +45,19 @@ function EndQuiz(props) {
 
 
   return (
-   <div className='container'>
-     <div className='row'>
-      <div className='col-4'></div>
-      <div className='col-4'>
-        <img src={Logo} alt="Responsive image"></img>
-      </div>
-      <div className='col-4'></div>
-    </div>
+   <div>
+   <div className='container align-middle'>
 
     <h1 className='text-center'>Nice game, {username}!</h1>
      
     <div className="card">
       <div className="card-body">
-    <h2>Score: {recentScore}</h2>
+    <h2 id="end-score">Score: {recentScore}</h2>
     </div>
   </div>
   <p>High Score: {highScore}</p>
 
-      <div className='uk-text-center uk-margin-medium-top'>
+      <div className='uk-text-center'>
         <a className="uk-link" href="/quiz">Play Again?</a>
       </div>
 
@@ -72,6 +66,8 @@ function EndQuiz(props) {
         <SocialIcon url="https://facebook.com/" target="_blank" />
       </div>
 
+    </div>
+  
     </div>
     
 
