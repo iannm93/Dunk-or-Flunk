@@ -4,6 +4,7 @@
   height: 100%;
   overflow-x: hidden;
   position: absolute;
+  cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
 
 .App-intro {
