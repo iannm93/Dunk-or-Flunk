@@ -13,7 +13,6 @@ function ScoreCard(props) {
     <div id="score-card" className="uk-card uk-card-small uk-width-1-3@m">
       <Score score={props.score} />
       <Brick brick={props.brick} />
-      <Timer />
     </div>
 
   );
