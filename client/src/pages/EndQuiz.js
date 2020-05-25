@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import { useAuth } from "../utils/auth";
 import API from "../utils/API";
+import Logo from "./logo.png"
+import "../pages/end.css"
 
 function EndQuiz(props) {
   const [username, setUsername] = useState("");
@@ -42,22 +44,21 @@ function EndQuiz(props) {
   //run API call to patch user data @ user.id for highScore
 
 
-
-
   return (
-    <div>
-      <div className='uk-heading-medium uk-text-center uk-margin-large-top'>
-        <h1>Nice game, {username}!</h1>
-      </div>
-      <div className='uk-flex uk-flex-center'>
-        <div className="uk-margin-top uk-card uk-card-primary uk-card-body uk-width-3-4">
-          <h1 className="uk-text-center">This Round's Score: {recentScore}</h1>
-          <h1 className="uk-text-center">Your Best Score: {highScore}</h1>
-        </div>
-      </div>
+   <div>
+   <div className='container align-middle'>
 
-      <div className='uk-text-center uk-margin-medium-top'>
-        <a className="uk-link" href="#">Play Again?</a>
+    <h1 className='text-center'>Nice game, {username}!</h1>
+     
+    <div className="card">
+      <div className="card-body">
+    <h2 id="end-score">Score: {recentScore}</h2>
+    </div>
+  </div>
+  <p>High Score: {highScore}</p>
+
+      <div className='uk-text-center'>
+        <a className="uk-link" href="/quiz">Play Again?</a>
       </div>
 
       <div className='uk-text-center uk-margin-top'>
@@ -66,6 +67,9 @@ function EndQuiz(props) {
       </div>
 
     </div>
+  
+    </div>
+    
 
   );
 }

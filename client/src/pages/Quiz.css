@@ -1,7 +1,6 @@
 .uk-card-footer {
   text-align: center;
 }
-
 /* html { 
   background: url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -9,35 +8,25 @@
   -o-background-size: cover;
   background-size: cover;
 } */
-
-
 .Quiz .white {
  color: white;
  text-shadow: 2px 2px red;
  text-decoration: none;
 }
-
 .Quiz h2 {
   margin-top: 6rem !important;
 }
-
 #header {
   padding-top: 10px;
 }
-
 a:hover {
   background-color: transparent;
 }
-
 /* Using !important to override whatever uikit had as priority for cards */
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
   background: transparent !important;
-  /* cursor: url("https://www.pikpng.com/pngl/m/336-3369800_2-years-ago-crying-jordan-face-png-clipart.png"), auto; */
    cursor: url(http://cur.cursors-4u.net/smilies/smi-3/smi207.cur), auto !important;
 }
-
-
-
 #centerQuiz {
   padding-top: 10px;
 }
@@ -47,7 +36,6 @@ a:hover {
   padding-right: 20px;
   text-align: center;
 }
-
 #quizContainer {
   color: white;
   background: rgba(0,0,0,0.5) url("https://images-na.ssl-images-amazon.com/images/I/61HUXDu6hFL._AC_SL1468_.jpg");
@@ -57,8 +45,6 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
-  
-
 }
 
 @media only screen and (max-width: 320px) {

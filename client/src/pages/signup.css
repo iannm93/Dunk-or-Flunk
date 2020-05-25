@@ -1,5 +1,5 @@
 /* Dunk or Flunk title  */
-h1{
+.Signup h1{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: orange;
@@ -9,32 +9,25 @@ h1{
     text-decoration: underline;
 }
 /* login title */
-h2{
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: red;
-    font-weight: bolder;
-    text-decoration: underline;
-}
 /* username/password */
 form{
     text-align: center;
     font-family: monospace;
 }
 /* p = link to login */
-p{
+/* .Signup p{
     text-align: center;
     margin:2rem;
     font-weight: 700;
     margin-left: 3rem;
     font-size: xx-large;
     font-family: monospace;
-}
+} */
 /* image for background */
 #signupContainer{
     color:black;
-    background-image: url("https://www.ecopetit.cat/wpic/mpic/165-1657200_baller-silhouette-photography-of-man-dunking-basketball-basketball.jpg");
-    background-size: contain;
+    background: url("https://cellularnews.com/wp-content/uploads/2020/03/basketball-dark-325x485.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
@@ -51,4 +44,32 @@ cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 .uk-card-body{
     margin-top:-5rem;
     cursor:url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+}
+
+#signup-logo {
+    margin-top: 45px;
+}
+
+#signup-head {
+    position: relative;
+    bottom: 17px;
+    color: #c82d2d;
+    text-decoration: none;
+
+}
+
+#signup-btn {
+    background-color: #c82d2d;
+    border: none;
+    color: white;
+}
+
+#gotologin {
+    color: #c82d2d;
+    font-size: 15px;
+}
+
+.Signup p {
+    text-align: center;
+    margin-top: 10px;
 }

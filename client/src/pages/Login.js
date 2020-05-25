@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import { useAuth } from "../utils/auth";
 import "../pages/login.css";
+import Logo from "./logo.png"
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -26,8 +27,8 @@ function Login() {
   return (
     <div className="uk-cover-container uk-height-viewport" id="loginContainer">
       <div className="uk-card uk-card-body">
-        <h1>Dunk or Flunk</h1>
-        <h2>Login</h2>
+        <img id="login-logo" src={Logo}></img>
+        <h2 id="login-head">Login</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="uk-margin">
             <div className="uk-inline">
@@ -56,13 +57,13 @@ function Login() {
                 ></input>
               </div>
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" id="login-btn">
               Submit
             </button>
           </div>
         </form>
         <p>
-          <Link to="/signup">Go to Signup</Link>
+          <Link id="gotosignup" to="/signup">Go to Signup</Link>
         </p>
       </div>
     </div>
