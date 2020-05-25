@@ -4,6 +4,7 @@
   height: 100%;
   overflow-x: hidden;
   position: absolute;
+  cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
 
 .App-intro {
@@ -37,6 +38,8 @@
   background-color: #c82d2d;
   border: none;
   color: white;
+  cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo12.png), auto !important;
+  margin-top: 1rem;
 }
 
 #viewhighbtn {

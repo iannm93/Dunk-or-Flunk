@@ -1,6 +1,5 @@
 .card-body {
-    background-color: #c82d2d;
-    
+    background-color: #c82d2d; 
 }
 
 #logo {
@@ -19,4 +18,7 @@
 }
 .text-center{
     text-align: center;
+}
+.container{
+    cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
