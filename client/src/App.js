@@ -8,12 +8,12 @@ import {
 
 // Our Components
 import { AuthProvider, useAuth } from "./utils/auth";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
+import Login from "./pages/Login/Login";
+import Profile from "./pages/Profile/Profile";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 // import Navbar from "./components/Navbar";
-import Quiz from "./pages/Quiz";
+import Quiz from "./pages/Quiz/Quiz";
 
 
 

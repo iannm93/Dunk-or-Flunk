@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
-import { useAuth } from "../utils/auth";
-import "../pages/login.css";
-import Logo from "./logo.png"
+import { useAuth } from "../../utils/auth";
+import "../Login/login.css"
+import Logo from "../logo.png"
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
