@@ -8,7 +8,7 @@ function Score(props) {
 
   return (
     <div>
-      <h2 className="white">score: {props.score}</h2>
+      <h2 className="white">Score: {props.score}</h2>
     </div>
   );
 }
