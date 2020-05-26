@@ -53,11 +53,10 @@
   margin-left: 32%;
   
 
+} 
+
+#reminder{
+  color: #c82d2d;
 }
 
-#reminder {
-  margin-top: 60%;
-  
-}
-
-
+ p{font-family: monospace;}
