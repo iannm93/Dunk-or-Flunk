@@ -45,9 +45,10 @@ function App() {
             <ProtectedRoute exact path="/profile">
               <Profile />
             </ProtectedRoute>
-            <Route exact path="/quiz">
+            
+            <ProtectedRoute exact path="/quiz">
               <Quiz />
-            </Route>
+            </ProtectedRoute>
           </Switch>
         </div>
       </Router>
