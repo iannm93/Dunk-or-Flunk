@@ -85,6 +85,9 @@ a:hover {
   .Quiz h2 {
     margin-top: 3rem !important;
   }
+  .Quiz .uk-card-header{
+    padding-left: 6rem;
+  }
 }
 
 @media only screen and (max-height: 640px) {
@@ -99,5 +102,8 @@ a:hover {
 
   .Quiz h2 {
     margin-top: 1.5rem !important;
+  }
+  .Quiz .uk-card-header{
+    padding-left: 4rem;
   }
 }
