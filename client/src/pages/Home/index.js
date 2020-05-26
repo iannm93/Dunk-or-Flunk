@@ -32,9 +32,9 @@ function Home() {
 
           <div className='row'>
             <button type="button" className="btn btn-primary" id="playnowbtn" onClick={() => history.push("/quiz")}>Play Now!</button>
+          <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
           </div>
           <div>
-          <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
         </div>
         
     </div>
