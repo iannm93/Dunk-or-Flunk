@@ -1,7 +1,7 @@
 import React from "react";
 import Score from "./Score";
 import Brick from "./Brick";
-import Timer from "./Timer";
+// import Timer from "./Timer";
 
 function ScoreCard(props) {
   // Access state and dispatch and cause this Count component to be re-rendered
