@@ -75,6 +75,9 @@ form{
     /* left: 115px; */
     bottom: 10px
 }
+.Login p {
+    text-align: center;
+}
 
 .Login img{
     display: block;
