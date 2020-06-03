@@ -18,9 +18,20 @@
 }
 .text-center{
     text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 .container{
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
 
-.jumbotron-fluid{background-image: url("./EndQuiz.jpg");}
+.jumbotron-fluid{
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url("./EndQuiz.jpg");
+    background-size: cover;
+}
