@@ -55,7 +55,7 @@ function EndQuiz(props) {
     <h2 id="end-score">Score: {recentScore}</h2>
   </div>
 </div>
-<p>High Score: {highScore}</p>
+<p className ="Hscore">High Score: {highScore}</p>
 
 <div className='uk-text-center'>
   <a className="uk-link" href="/quiz">Play Again?</a>
