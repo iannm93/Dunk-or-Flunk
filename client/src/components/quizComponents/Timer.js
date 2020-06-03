@@ -1,39 +1,17 @@
 import React, { Component } from "react";
+import Quiz from "../../pages/Quiz/Quiz";
+
 export default class Timer extends Component {
   state = {
-    minutes: 0,
-    seconds: 20,
+    seconds: this.props.seconds,
+    brick: this.props.brick,
   }
-  componentDidMount() {
-    this.myInterval = setInterval(() => {
-      const { seconds, minutes } = this.state;
-      if (seconds > 0) {
-        this.setState(({ seconds }) => ({
-          seconds: seconds - 1
-        }));
-      }
-      if (seconds === 0) {
-        if (minutes === 0) {
-          clearInterval(this.myInterval);
-        } else {
-          this.setState(({ minutes }) => ({
-            minutes: minutes - 1,
-            seconds: 59
-          }));
-        }
-      }
-    }, 1000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.myInterval);
-  }
-  render() {
-    const { minutes, seconds } = this.state;
+  render(props) {
     return (
       <div>
-        {minutes === 0 && seconds === 0
+        {this.props.seconds === 0
           ? <h2 className="white">Brick!</h2>
-          : <h2 className="white">Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h2>
+          : <h2 className="white">Shot Clock: {this.props.seconds < 10 ? `0${this.props.seconds}` : this.props.seconds}</h2>
         }
       </div>
     );

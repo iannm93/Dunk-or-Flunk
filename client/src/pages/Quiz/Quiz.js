@@ -14,13 +14,41 @@ class Quiz extends React.Component {
     score: 0,
     brick: 0,
     question: "",
+    seconds: 24,
   };
 
   componentDidMount() {
     this.randomQuestion();
     this.searchPlayers();
+    this.timerLogic();
   }
 
+
+  timerLogic() {
+    this.myInterval = setInterval(() => {
+      // const { seconds, minutes } = this.state;
+      if (this.state.seconds > 0) {
+        this.setState(({ seconds }) => ({
+          seconds: seconds - 1
+        }));
+      }
+      if (this.state.seconds === 0) {
+        {
+          this.setState(({ brick }) => ({
+            brick: brick + 1
+          }));
+          // clearInterval(this.myInterval);
+          this.randomQuestion();
+          this.searchPlayers();
+          this.resetClock();
+        }
+      }
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.myInterval);
+  }
 
   searchPlayers = () => {
     const players = [
@@ -73,7 +101,6 @@ class Quiz extends React.Component {
       { name: "Trae Young", id: 490, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/cf418e0c-de9d-438f-a1ac-3be539a56c42/headshot_1570728816.jpg" },
       { name: "Bojan Bogdonovic", id: 54, src: "https://s3-us-west-2.amazonaws.com/osdb-production/headShots/7ff02e19-e829-4e56-9a34-233a71fce76c/headshot_1570558387.jpg" },
     ];
-
     const randomNum1 = (Math.floor(Math.random() * players.length));
     const randomNum1Index = randomNum1
 
@@ -132,6 +159,10 @@ class Quiz extends React.Component {
   //Use id to get the person the player chose and store it in a new temp variable
   //Use this.state.question.comparableStat to get the relevant stat for that player
   //Compare the chosen stat to the other player's stat
+  resetClock = () => {
+    this.setState({ seconds: 24 })
+  }
+
 
   HandleClick = (userGuess) => {
     // event.preventDefault()
@@ -188,11 +219,12 @@ class Quiz extends React.Component {
       this.setState(({ score }) => ({ score: score + 1 }))
       this.randomQuestion();
       this.searchPlayers();
+      this.resetClock();
     } else {
       this.setState(({ brick }) => ({ brick: brick + 1 }))
       this.randomQuestion();
       this.searchPlayers();
-
+      this.resetClock();
     }
 
     // console.log(userGuess)
@@ -212,7 +244,7 @@ class Quiz extends React.Component {
         <div className="uk-flex uk-flex-center" id="centerQuiz">
           <PlayerCard function1={this.HandleClick} name={this.state.player1.name} id={this.state.player1.id} image={this.state.player1.image} stats={this.state.player1.stats} chosenQuestion={this.state.question} />
 
-          <ScoreCard score={this.state.score} brick={this.state.brick} />
+          <ScoreCard seconds={this.state.seconds} score={this.state.score} brick={this.state.brick} />
           <PlayerCard function1={this.HandleClick} name={this.state.player2.name} id={this.state.player2.id} image={this.state.player2.image} stats={this.state.player2.stats} chosenQuestion={this.state.question} />
         </div>
       </div>
@@ -221,6 +253,5 @@ class Quiz extends React.Component {
     );
   }
 }
-
 
 export default Quiz;
