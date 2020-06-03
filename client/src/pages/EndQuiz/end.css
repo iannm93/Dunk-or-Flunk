@@ -22,3 +22,5 @@
 .container{
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
 }
+
+.jumbotron-fluid{background-image: url("./EndQuiz.jpg");}
