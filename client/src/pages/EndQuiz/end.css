@@ -11,14 +11,33 @@
     color: white;
     text-align: center;
     text-decoration: none;
+    font-family: 'Oswald', sans-serif;
 }
+.Hscore{color: yellow;}
 
 #end-score-card {
     margin-right: 10%;
 }
 .text-center{
     text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 4rem;
+    font-size: 52px;
+    color: black;
+    text-transform: capitalize;
 }
 .container{
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+}
+
+.jumbotron-fluid{
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url("./EndQuiz.jpg");
+    background-size: cover;
 }
