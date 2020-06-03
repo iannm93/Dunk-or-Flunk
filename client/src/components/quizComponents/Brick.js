@@ -9,7 +9,7 @@ function Brick(props) {
     <div>
       <h2 className="white">Bricks: {props.brick}</h2>
     </div>
-  );
+  )
 }
 
 export default Brick;
