@@ -20,6 +20,8 @@
     text-align: center;
     font-family: 'Oswald', sans-serif;
     margin-top: 4rem;
+    font-size: 52px;
+    color: black;
 }
 .container{
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
