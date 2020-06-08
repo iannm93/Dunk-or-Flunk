@@ -1,4 +1,68 @@
-.profile {
+/* .profile {
     background-color: red;
     background-size: cover;
-}
+} */
+.homecontainer {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  #home-logo {
+    height: 250px;
+    width: 250px;
+    
+  }
+  
+  #welcome {
+    margin-top: 5%;
+    
+  }
+  
+  #logout {
+    float: left;
+    color: black;
+    
+  }
+  
+  #gotoprofile {
+    float: right;
+    color: black;
+    
+  }
+  
+  #playnowbtn {
+    background-color: #c82d2d;
+    border: none;
+    color: white;
+    cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo12.png), auto !important;
+    margin-top: 1rem;
+  }
+  
+  #viewhighbtn {
+    background-color: lightskyblue;
+    border: none;
+    color: white;
+  }
+  
+  .homebtns {
+    margin-top: 25%;
+    margin-left: 32%;
+    
+  
+  } 
+  
+  #reminder{
+    color: #c82d2d;
+  }
+  
+   p{font-family: monospace;}
+  
+   .row{display: flow-root;}
