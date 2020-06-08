@@ -32,10 +32,10 @@ function App() {
       <Router>
         <div>
           {/* <Navbar /> */}
-          <Switch>
             <Route exact path="/">
               <Home />
             </Route>
+          <Switch>
             <Route exact path="/login">
               <Login />
             </Route>

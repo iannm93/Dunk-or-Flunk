@@ -15,7 +15,7 @@ function Home() {
   return (
     //     <p>
     //       <a id="logout" onClick={() => logout()}>Log Out</a>
-    //       <span>
+    //       <span>of web
     //         <p id="gotoprofile" onClick={() => history.push("/profile")}>Profile</p>
     //       </span>
     //     </p>
@@ -27,11 +27,11 @@ function Home() {
         <p>Welcome to Dunk or Flunk, the NBA statistics quiz! When the quiz begins, click or press the player headshot corresponding with the correct statistic. Every time the correct headshot is clicked, you will get a point. Every time the incorrect headshot is clicked, you will get a brick. Three bricks and you go home. Good luck! </p>
 
           <div className='row'>
-            <button type="button" className="btn btn-danger" id="viewhighbtn">Signup</button>
+            <button type="button" className="btn btn-danger" id="viewhighbtn" onClick={() => history.replace("/signup")}>Signup now!</button>
           </div>
 
           <div className='row'>
-            <button type="button" className="btn btn-primary" id="playnowbtn" onClick={() => history.push("/quiz")}>Play Now!</button>
+            <button type="button" className="btn btn-primary" id="playnowbtn" onClick={() => history.push("/login")}>Login!</button>
           <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
           </div>
           <div>
