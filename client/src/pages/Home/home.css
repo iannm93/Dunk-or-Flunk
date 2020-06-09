@@ -34,6 +34,7 @@
   float: right;
   color: black;
   
+  
 }
 
 #playnowbtn {
@@ -41,12 +42,15 @@
   border: none;
   color: white;
   cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo12.png), auto !important;
+  font-family: 'Oswald', sans-serif;
 }
 
 #viewhighbtn {
   background-color: dodgerblue;
   border: none;
   color: white;
+  margin-right: 1rem;
+  font-family: 'Oswald', sans-serif;
 }
 
 .homebtns {
