@@ -23,11 +23,11 @@
     height: 250px;
     width: 250px;
     margin-left: -4rem;
-    margin-bottom: -5rem;
+  
   }
   
-  #welcome {
-    margin-top: 5%;
+  #welcome{
+    margin-top: -6%;
     font-family: 'Oswald', sans-serif;
     font-size: xxx-large;
     color: white;
