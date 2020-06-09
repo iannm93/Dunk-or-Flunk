@@ -14,23 +14,20 @@ function Profile() {
     <div className="homecontainer">
     <p>
       <a id="logout" onClick={() => logout()}>Log Out</a>
-      <span>
-        <p id="gotoprofile" onClick={() => history.push("/profile")}>Profile</p>
-      </span>
     </p>
 
     <img id="home-logo" src={Logo}></img>
 
     <h2 id="welcome">Welcome, {user.username}!</h2>
-    <p>Welcome to Dunk or Flunk, the NBA statistics quiz! When the quiz begins, click or press the player headshot corresponding with the correct statistic. Every time the correct headshot is clicked, you will get a point. Every time the incorrect headshot is clicked, you will get a brick. Three bricks and you go home. Good luck! </p>
-
+    <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
       <div className='row'>
-        <button type="button" className="btn btn-danger" id="viewhighbtn">View Highscores </button>
+      <button type="button" className="btn btn-primary" id="playnowbtn" onClick={() => history.push("/quiz")}>Play Now!</button>
+        
       </div>
 
       <div className='row'>
-        <button type="button" className="btn btn-primary" id="playnowbtn" onClick={() => history.push("/quiz")}>Play Now!</button>
-      <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
+      <button type="button" className="btn btn-danger" id="viewhighbtn">View Highscores </button>
+   
       </div>
       <div>
     </div>

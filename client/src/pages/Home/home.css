@@ -1,10 +1,11 @@
-.homecontainer {
+#homeContainer {
   text-align: center;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   position: absolute;
   cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+  background-color: black;
 }
 
 .App-intro {
@@ -14,6 +15,7 @@
 #home-logo {
   height: 250px;
   width: 250px;
+  margin-bottom: -1rem;
   
 }
 
@@ -39,7 +41,6 @@
   border: none;
   color: white;
   cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo12.png), auto !important;
-  margin-top: 1rem;
 }
 
 #viewhighbtn {
@@ -59,6 +60,23 @@
   color: #c82d2d;
 }
 
- p{font-family: monospace;}
+ p{  
+font-family: 'Oswald', sans-serif;
+color: #c82d2d;
+padding:1rem;
+margin-bottom: 0rem;}
 
- .row{display: flow-root;}
+ /* .row{display: flow-root;} */
+
+ #title {
+   margin-top: -1rem;
+   font-family: 'Oswald', sans-serif;
+   color: white;
+   font-size: xx-large;
+ }
+
+ 
+ 
+.middle{color: blue;}
+.end{color: white;}
+img{margin-bottom: -2rem;}
