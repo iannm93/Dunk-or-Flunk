@@ -15,14 +15,27 @@ class Quiz extends React.Component {
     brick: 0,
     question: "",
     seconds: 24,
+    allHighScores: [],
   };
 
   componentDidMount() {
     this.randomQuestion();
     this.searchPlayers();
     this.timerLogic();
+    this.getAllHighScores();
   }
 
+  getAllHighScores() {
+    API.getUsers()
+      .then((res) => {
+        this.state.allHighScores = res.data
+        console.log(this.state.allHighScores)
+        this.setState(prevState => {
+          this.state.allHighScores.sort((a, b) => (b.highScore - a.highScore))
+        })
+        console.log(this.state.allHighScores)
+      });
+  }
 
   timerLogic() {
     this.myInterval = setInterval(() => {
@@ -235,7 +248,7 @@ class Quiz extends React.Component {
 
   render() {
     if (this.state.brick >= 3) {
-      return <EndQuiz score={this.state.score} />
+      return <EndQuiz score={this.state.score} allHighScores={this.state.allHighScores} />
     }
     return (
       <div className="uk-grid-medium uk-child-width-expand@s uk-height-expand uk-width-expand Quiz" id="quizContainer" uk-grid>
