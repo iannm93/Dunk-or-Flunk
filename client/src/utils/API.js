@@ -4,6 +4,9 @@ export default {
   getUser: (id) => {
     return axios.get(`/api/user/${id}`);
   },
+  getUsers: () => {
+    return axios.get(`/api/users/`);
+  },
   // sign up a user to our service
   signUpUser: (username, password, highScore) => {
     return axios.post("api/signup", { username, password, highScore });

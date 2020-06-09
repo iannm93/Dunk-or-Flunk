@@ -10,6 +10,7 @@ function EndQuiz(props) {
   const [highScore, setScore] = useState(1);
   const { user,logout } = useAuth();
   const recentScore = props.score;
+  const allhighScores = props.allHighScores;
 
 
   //On page load we do useEffect to do a getUser
@@ -20,6 +21,11 @@ function EndQuiz(props) {
     })
   }, [user]);
 
+  useEffect(() => {
+    if (recentScore > allhighScores[0]) {
+      allhighScores.unshift(user)
+    }
+  }, [allhighScores]);
   //Want to do a .then AFTER we have all available info
   //After api call happens and highScore state is set
   //Run if statement comparing props.score and highScore
@@ -56,7 +62,18 @@ function EndQuiz(props) {
               <h2 id="end-score">Score: {recentScore}</h2>
             </div>
           </div>
-          <p className="Hscore">High Score: {highScore}</p>
+          <br></br>
+          <div className="card">
+            <div className="card-body">
+              <h2 id="end-score">High Scores</h2>
+              <br></br>
+              <h2 id="end-score">Name: {allhighScores[0].username}, Score: {allhighScores[0].highScore}</h2>
+              <h2 id="end-score">Name: {allhighScores[1].username}, Score: {allhighScores[1].highScore}</h2>
+              <h2 id="end-score">Name: {allhighScores[2].username}, Score: {allhighScores[2].highScore}</h2>
+              {/* <h2 id="end-score">Name: {allhighScores[0].username} Score: {allhighScores[0].highScore}</h2> */}
+              {/* <h2 id="end-score">Name: {allhighScores[0].username} Score: {allhighScores[0].highScore}</h2> */}
+            </div>
+          </div>
 
           <div className='uk-text-center'>
             <a className="uk-link" href="/quiz">Play Again?</a>
