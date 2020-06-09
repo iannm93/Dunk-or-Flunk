@@ -10,7 +10,7 @@ function Login() {
   const history = useHistory();
 
   if (isLoggedIn) {
-    return <Redirect to="/" />;
+    return <Redirect to="/"/>;
   }
 
   const handleFormSubmit = event => {
@@ -18,7 +18,7 @@ function Login() {
 
     login(username, password)
       // navigate to the profile page
-      .then(() => history.push("/"))
+      .then(() => history.push("/profile"))
       .catch(err => {
         alert(err.response.data.message);
       });

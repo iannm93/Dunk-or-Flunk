@@ -32,10 +32,10 @@ function App() {
       <Router>
         <div>
           {/* <Navbar /> */}
-          <Switch>
-            <ProtectedRoute exact path="/">
+            <Route exact path="/">
               <Home />
-            </ProtectedRoute>
+            </Route>
+          <Switch>
             <Route exact path="/login">
               <Login />
             </Route>
