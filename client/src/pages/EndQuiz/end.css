@@ -12,6 +12,7 @@
     text-align: center;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
+    margin-top: 0rem;
 }
 .Hscore{color: yellow;}
 
@@ -21,7 +22,7 @@
 .text-center{
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    margin-top: 1rem;
+    margin-top: -1rem;
     font-size: 52px;
     color: black;
     text-transform: capitalize;
@@ -31,7 +32,6 @@
 }
 
 .jumbotron-fluid{
-    position:absolute;
     padding:0;
     margin:0;
     top:0;
