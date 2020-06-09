@@ -22,7 +22,6 @@
 .text-center{
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    margin-top: -1rem;
     font-size: 52px;
     color: black;
     text-transform: capitalize;
@@ -39,6 +38,5 @@
 #logout {
     float: left;
     color: yellow;
-    margin-left: -6rem;
     
   }
