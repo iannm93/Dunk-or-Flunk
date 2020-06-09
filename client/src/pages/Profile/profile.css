@@ -9,27 +9,33 @@
     overflow-x: hidden;
     position: absolute;
     cursor: url("https://img.icons8.com/color/50/000000/basketball.png"), auto;
+    background-image: url(https://www.ocala.com/storyimage/LK/20171127/NEWS/171128376/AR/0/AR-171128376.jpg?MaxW=600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   
   .App-intro {
     font-size: large;
   }
   
-  #home-logo {
+  .Profile #home-logo1{
     height: 250px;
     width: 250px;
-    
+    margin-left: -4rem;
+    margin-bottom: -5rem;
   }
   
   #welcome {
     margin-top: 5%;
-    
+    font-family: 'Oswald', sans-serif;
+    font-size: xxx-large;
+    color: white;
   }
   
-  #logout {
+  #logout1{
     float: left;
-    color: black;
-    
+    color: #c82d2d;
   }
   
   #gotoprofile {
@@ -50,6 +56,7 @@
     background-color: lightskyblue;
     border: none;
     color: white;
+    margin-top: 1rem;
   }
   
   .homebtns {
@@ -61,8 +68,9 @@
   
   #reminder{
     color: #c82d2d;
+    font-size: x-large;
   }
   
-   p{font-family: monospace;}
+   p{font-family: 'Oswald', sans-serif;}
   
    .row{display: flow-root;}

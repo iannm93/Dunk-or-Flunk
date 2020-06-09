@@ -13,10 +13,10 @@ function Profile() {
   return (
     <div className="homecontainer">
     <p>
-      <a id="logout" onClick={() => logout()}>Log Out</a>
+      <a id="logout1" onClick={() => logout()}>Log Out</a>
     </p>
 
-    <img id="home-logo" src={Logo}></img>
+    <img id="home-logo1" src={Logo}></img>
 
     <h2 id="welcome">Welcome, {user.username}!</h2>
     <p id="reminder">*Reminder: Flip your phone to take the quiz!</p>
