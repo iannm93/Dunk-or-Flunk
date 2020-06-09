@@ -13,7 +13,7 @@
 /* username/password */
 form{
     text-align: center;
-    font-family: monospace;
+    font-family: 'Oswald', sans-serif;
 }
 /* go to signup page */
 /* .Login p{
@@ -53,6 +53,7 @@ form{
     color: #c82d2d;
     text-decoration: none;
     text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 #login-btn {
