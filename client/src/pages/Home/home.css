@@ -44,7 +44,7 @@
 }
 
 #viewhighbtn {
-  background-color: lightskyblue;
+  background-color: dodgerblue;
   border: none;
   color: white;
 }
@@ -73,10 +73,11 @@ margin-bottom: 0rem;}
    font-family: 'Oswald', sans-serif;
    color: white;
    font-size: xx-large;
+   text-decoration: underline;
  }
 
  
  
-.middle{color: blue;}
+.middle{color: dodgerblue;}
 .end{color: white;}
 img{margin-bottom: -2rem;}

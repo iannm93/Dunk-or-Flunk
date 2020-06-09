@@ -8,7 +8,7 @@ import "../EndQuiz/end.css"
 function EndQuiz(props) {
   const [username, setUsername] = useState("");
   const [highScore, setScore] = useState(1);
-  const { user } = useAuth();
+  const { user,logout } = useAuth();
   const recentScore = props.score;
 
 
@@ -46,6 +46,9 @@ function EndQuiz(props) {
     <div className="background">
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
+         <p>
+      <a id="logout" onClick={() => logout()}>Log Out</a>
+    </p>
           <h1 className='text-center'>Nice game, {username}!</h1>
 
           <div className="card">

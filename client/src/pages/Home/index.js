@@ -24,7 +24,7 @@ function Home() {
     <div className="uk-cover-container uk-height-viewport home" id="homeContainer">
         <img id="home-logo" src={Logo}></img>
 
-        <h1 id = "title">The NBA statistics quiz</h1>
+        <h1 id = "title">The NBA Statistics Quiz</h1>
         <div className = "row">
 
         <div className = "column">
@@ -41,7 +41,7 @@ function Home() {
           </div>
           <div className = "column">
           <img src="https://img.icons8.com/color/50/000000/brick-wall.png"/>
-          <p className = "end">Three bricks and you go back to the bench! Good luck!</p>
+          <p className = "end">Three bricks and its a Turnover! Good luck!</p>
           </div>
         </div>
           {/* <p id="reminder">   </p> */}

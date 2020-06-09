@@ -21,7 +21,7 @@
 .text-center{
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-size: 52px;
     color: black;
     text-transform: capitalize;
@@ -41,3 +41,9 @@
     background: url("./EndQuiz.jpg");
     background-size: cover;
 }
+#logout {
+    float: left;
+    color: yellow;
+    margin-left: -6rem;
+    
+  }
